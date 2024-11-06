@@ -1,0 +1,8 @@
+.phone {
+  @include link-reset;
+
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  color: $white-color;
+}

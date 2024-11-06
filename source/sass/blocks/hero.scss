@@ -1,0 +1,63 @@
+.hero {
+  background: $hero-bg;
+  min-height: 412px;
+  color: $white-color;
+}
+
+.hero__content {
+
+}
+
+.hero__features {
+  @include list-reset;
+
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+  align-self: flex-end;
+}
+
+.hero__features-item {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.hero__offer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 48px auto 14px auto 48px auto;
+  padding-bottom: 32px;
+  text-align: right;
+  column-gap: 21px;
+}
+
+.hero__city {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+
+  font-family: $second-font;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.hero__title {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+
+  margin: 0;
+  font-family: $second-font;
+  font-weight: 800;
+  font-size: 62px;
+  line-height: 62px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.hero__offer-link {
+  grid-column: 1 / -1;
+  grid-row: 6 / 7;
+}
+
+.hero__img {
+  display: none;
+}

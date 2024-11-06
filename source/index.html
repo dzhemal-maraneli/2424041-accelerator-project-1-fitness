@@ -9,31 +9,35 @@
 </head>
 
 <body class="page-body">
-  <h1 class="visually-hidden">Главная страница сайта тренаженого зала Fitness</h1>
+  <h1 class="visually-hidden">Главная страница сайта тренаженого зала SUPERGYM</h1>
 
   <section class="hero" data-test="hero">
     <div class="container hero__container">
       <header class="header">
         <a class="logo" href="#">
-          <img class="logo__img" src="#" alt="Логотип тренажерного зала Fitness">
+          <img class="logo__img" src="./img/logo.svg" width="100" height="20" alt="Логотип тренажерного зала SUPERGYM">
         </a>
         <a class="phone" href="#">8 800 555-55-55</a>
       </header>
+
       <div class="hero__content">
-        <div class="hero__text-box">
+        <div class="hero__offer">
           <ul class="hero__features">
             <li class="hero__features-item">Тренажёрный зал</li>
-            <li class="hero__features-item">Групповые занятия</li>
+            <li class="hero__features-item">Групповые&nbsp;занятия</li>
             <li class="hero__features-item">Кардио-зона</li>
           </ul>
-          <div class="hero__offer">
-            <sapn class="hero__city">Омск</sapn>
-            <h2 class="hero__title">Фитнес Центр</h2>
-            <a class="hero__offer-link" href="#">Купить абонемент</a>
-          </div>
+
+          <sapn class="hero__city">Омск</sapn>
+
+          <h2 class="hero__title">Фитнес Центр</h2>
+
+          <a class="hero__offer-link button" href="#">Купить абонемент</a>
         </div>
+
         <img class="hero__img" src="#" alt="">
       </div>
+
     </div>
   </section>
 
@@ -42,7 +46,7 @@
       <div class="about__text-content">
         <h2 class="about__title section-title">Тренажёрный зал</h2>
         <span class="about__subtitle">Просторный зал площадью 900 кв/м</span>
-        <p class="about__text main-text">
+        <p>
           Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный
           зал оснащён всем необходимым современным оборудованием для всех спортсменов.
           В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре
@@ -56,7 +60,8 @@
     </div>
   </section>
 
-  <section class="price">
+
+  <section class="price" data-test="price">
     <div class="container price__conatiner">
       <h2 class="price__title section-title">Абонементы</h2>
 
@@ -106,10 +111,22 @@
     </div>
   </section>
 
+  <section class="games" data-test="games">
+    <h2 class="visually-hidden">Дата и время наших ближайших соревнований по CrossFit</h2>
+    <div class="container games__container">
+      <div class="games__content">
+        <div class="games__box">
+          <h3 class="games__title" lang="en">SUPER <br> GAMES</h3>
+        </div>
+        <span class="games__text">Ежегодные соревнования по CrossFit</span>
+        <a class="games__link" href="#">Заполнить заявку</a>
+      </div>
+
+      <img class="games__img" src="#" alt="">
+    </div>
+  </section>
 
 
-  <div data-test="price">price</div>
-  <div data-test="games">games</div>
   <div data-test="juri">juri</div>
   <div data-test="features">features</div>
   <div data-test="offers">offers</div>

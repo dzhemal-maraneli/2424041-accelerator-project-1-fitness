@@ -1,0 +1,13 @@
+.button {
+  @include link-reset;
+
+  padding: 22px 10px;
+  border: 2px solid $white-color;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white-color;
+}

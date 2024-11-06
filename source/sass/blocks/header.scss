@@ -1,0 +1,5 @@
+.header {
+  @include flex-space-between-center;
+
+  padding: 30px 0;
+}
