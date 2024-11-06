@@ -12,37 +12,102 @@
   <h1 class="visually-hidden">Главная страница сайта тренаженого зала Fitness</h1>
 
   <section class="hero" data-test="hero">
-    <header class="header">
-      <a class="logo" href="#">
-        <img class="logo__img" src="#" alt="Логотип тренажерного зала Fitness">
-      </a>
-      <a class="phone" href="#">8 800 555-55-55</a>
-    </header>
-
-    <div class="hero__content">
-      <div class="hero__text-box">
-        <ul class="hero__features">
-          <li class="hero__features-item">Тренажёрный зал</li>
-          <li class="hero__features-item">Групповые занятия</li>
-          <li class="hero__features-item">Кардио-зона</li>
-        </ul>
-
-        <div class="hero__offer">
-          <sapn class="hero__city">Омск</sapn>
-          <h2 class="hero__title">Фитнес Центр</h2>
-          <a class="hero__offer-link" href="#">Купить абонемент</a>
+    <div class="container hero__container">
+      <header class="header">
+        <a class="logo" href="#">
+          <img class="logo__img" src="#" alt="Логотип тренажерного зала Fitness">
+        </a>
+        <a class="phone" href="#">8 800 555-55-55</a>
+      </header>
+      <div class="hero__content">
+        <div class="hero__text-box">
+          <ul class="hero__features">
+            <li class="hero__features-item">Тренажёрный зал</li>
+            <li class="hero__features-item">Групповые занятия</li>
+            <li class="hero__features-item">Кардио-зона</li>
+          </ul>
+          <div class="hero__offer">
+            <sapn class="hero__city">Омск</sapn>
+            <h2 class="hero__title">Фитнес Центр</h2>
+            <a class="hero__offer-link" href="#">Купить абонемент</a>
+          </div>
         </div>
+        <img class="hero__img" src="#" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="about" data-test="about">
+    <div class="container about__container">
+      <div class="about__text-content">
+        <h2 class="about__title section-title">Тренажёрный зал</h2>
+        <span class="about__subtitle">Просторный зал площадью 900 кв/м</span>
+        <p class="about__text main-text">
+          Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный
+          зал оснащён всем необходимым современным оборудованием для всех спортсменов.
+          В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре
+          есть несколько оборудованных залов для различных видов групповых занятий.
+        </p>
       </div>
 
-      <img class="hero__img" src="#" alt="">
+      <img class="about__img" src="#" alt="Фотография нашего тренажерного зала">
+
+      <div class="about__video">Заглушка для видео</div>
+    </div>
+  </section>
+
+  <section class="price">
+    <div class="container price__conatiner">
+      <h2 class="price__title section-title">Абонементы</h2>
+
+      <ul class="price__time-list">
+        <li class="price__time-item">
+          <button class="price__time-button">1 месяц</button>
+        </li>
+        <li class="price__time-item">
+          <button class="price__time-button">6 месяцев</button>
+        </li>
+        <li class="price__time-item">
+          <button class="price__time-button">12 месяцев</button>
+        </li>
+      </ul>
+
+      <ul class="price__tariffs-list">
+        <li class="price__tariffs-item">
+          <h3 class="price__tariffs-title">С тренером</h3>
+          <span class="price__tariffs-period">12 занятий</span>
+          <span class="price__tariffs-price">
+            5000
+            <span class="price__tariffs-currency">₽</span>
+          </span>
+          <a class="price__tariffs-link" href="">Купить абонемент</a>
+        </li>
+
+        <li class="price__tariffs-item">
+          <h3 class="price__tariffs-title">Дневной</h3>
+          <span class="price__tariffs-period">с 8:00 до 17:00</span>
+          <span class="price__tariffs-price">
+            1700
+            <span class="price__tariffs-currency">₽</span>
+          </span>
+          <a class="price__tariffs-link" href="">Купить абонемент</a>
+        </li>
+
+        <li class="price__tariffs-item">
+          <h3 class="price__tariffs-title">Полный день</h3>
+          <span class="price__tariffs-period">с 8:00 до 22:00</span>
+          <span class="price__tariffs-price">
+            2700
+            <span class="price__tariffs-currency">₽</span>
+          </span>
+          <a class="price__tariffs-link" href="">Купить абонемент</a>
+        </li>
+      </ul>
     </div>
   </section>
 
 
 
-
-
-  <div data-test="about">about</div>
   <div data-test="price">price</div>
   <div data-test="games">games</div>
   <div data-test="juri">juri</div>
