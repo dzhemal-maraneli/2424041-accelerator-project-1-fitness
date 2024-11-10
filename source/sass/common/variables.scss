@@ -4,11 +4,14 @@ $second-font: "Alumni Sans", sans-serif;
 
 /* COLORS */
 $white-color: #ffffff;
+$white-color-op07: rgba(#ffffff, 0.7);
+$white-color-op08: rgba(#ffffff, 0.8);
 $main-text-color: #102654;
 $main-text-color-light: rgba(#102654, 0.5);
 $accent-text-color: #103aae;
 $hero-bg: linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
 $primary-bg: #f8f9fc;
+$accent-bg: #ed0233;
 $second-bg: #1c3374;
 $active-tab-color: #d10a42;
 $price-border: rgba(#787878, 0.2);

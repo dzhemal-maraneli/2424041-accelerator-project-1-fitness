@@ -119,7 +119,7 @@
             <span class="price__tariffs-currency">₽</span>
             <span class="price__tariffs-price-bg" aria-hidden="true">5000</span>
           </div>
-          <a class="price__tariffs-link" href="">Купить абонемент</a>
+          <a class="price__tariffs-link button button--has-background" href="#">Купить абонемент</a>
         </li>
 
         <li class="price__tariffs-item" data-name="daytime">
@@ -130,7 +130,7 @@
             <span class="price__tariffs-currency">₽</span>
             <span class="price__tariffs-price-bg" aria-hidden="true">1700</span>
           </div>
-          <a class="price__tariffs-link" href="">Купить абонемент</a>
+          <a class="price__tariffs-link button button--has-background" href="#">Купить абонемент</a>
         </li>
 
         <li class="price__tariffs-item" data-name="all-day">
@@ -141,26 +141,59 @@
             <span class="price__tariffs-currency">₽</span>
             <span class="price__tariffs-price-bg" aria-hidden="true">2700</span>
           </div>
-          <a class="price__tariffs-link" href="">Купить абонемент</a>
+          <a class="price__tariffs-link button button--has-background" href="#">Купить абонемент</a>
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- <section class="games section" data-test="games">
+  <section class="games section" data-test="games">
     <h2 class="visually-hidden">Дата и время наших ближайших соревнований по CrossFit</h2>
     <div class="container games__container">
       <div class="games__content">
         <div class="games__box">
           <h3 class="games__title" lang="en">SUPER <br> GAMES</h3>
+
+          <ul class="games__list">
+            <li class="games__item">
+              <h3 class="games__item-title">Дата</h3>
+              <div class="games__item-box games__item-box--date">
+                <span class="games__item-number">7</span>
+                <span class="games__item-mounth">Марта</span>
+                <span class="games__item-year">2019</span>
+              </div>
+            </li>
+
+            <li class="games__item">
+              <h3 class="games__item-title">Время</h3>
+              <div class="games__item-box games__item-box--time">
+                <span class="games__item-number">12:00</span>
+              </div>
+            </li>
+          </ul>
         </div>
         <span class="games__text">Ежегодные соревнования по CrossFit</span>
-        <a class="games__link" href="#">Заполнить заявку</a>
+        <a class="games__link button" href="#">Заполнить заявку</a>
       </div>
 
-      <img class="games__img" src="#" alt="">
+      <div class="games__img-wrapper">
+        <picture>
+          <source media="(min-width: 1366px)" width="660" height="500" type="image/webp"
+            srcset="img/games/games-desktop@1x.webp 1x, img/games/games-desktop@2x.webp 2x">
+          <source media="(min-width: 768px)" width="378" height="348" type="image/webp"
+            srcset="img/games/games-tablet@1x.webp 1x, img/games/games-tablet@2x.webp 2x">
+          <source type="image/webp" width="290" height="290"
+            srcset="img/games/games-mobile@1x.webp 1x, img/games/games-mobile@2x.webp 2x">
+          <source media="(min-width: 1366px)" width="660" height="500" type="image/png"
+            srcset="img/games/games-desktop@1x.png 1x, img/games/games-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" width="378" height="348" type="image/png"
+            srcset="img/games/games-tablet@1x.png 1x, img/games/games-tablet@2x.png 2x">
+          <img class="games__img" src="img/games/games-mobile@1x.png" srcset="img/games/games-mobile@2x.png 2x"
+            width="290" height="290" alt="Фотография нашего тренажерного зала">
+        </picture>
+      </div>
     </div>
-  </section> -->
+  </section>
 
 
   <!-- <div data-test="juri">juri</div>

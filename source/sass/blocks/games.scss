@@ -1,0 +1,166 @@
+.games {
+  padding: 25px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 0;
+  }
+}
+
+.games__container {
+  @include flex-column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.games__content {
+  @include flex-column-center;
+
+  flex-grow: 1;
+  gap: 16px;
+
+  padding: 40px;
+  background-color: $accent-bg;
+  color: $white-color;
+
+  @media (min-width: $tablet-width) {
+    gap: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 80px;
+  }
+}
+
+.games__box {
+  @include flex-space-between-center;
+
+  gap: 37px;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 77px;
+  }
+}
+
+.games__title {
+  margin: 0;
+  font-family: $second-font;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 54px;
+  text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    font-size: 82px;
+    line-height: 96px;
+  }
+}
+
+.games__list {
+  @include list-reset;
+}
+
+.games__item {
+  @include flex-column;
+
+  gap: 2px;
+}
+
+.games__item-title {
+  position: relative;
+  margin: 0;
+  padding-bottom: 3px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $white-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+
+.games__item-box--date {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  column-gap: 3px;
+}
+
+.games__item-box--date .games__item-number {
+  grid-row: 1 / -1;
+  align-self: center;
+}
+
+.games__item-number {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.games__item-mounth {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.games__item-year {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.games__text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.games__link {
+  width: 100%;
+}
+
+.games__img-wrapper {
+  width: 290px;
+  height: 290px;
+  background-color: $second-bg;
+  flex-shrink: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 378px;
+    height: 348px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 660px;
+    height: 500px;
+  }
+}
+
+.games__img {
+  width: 100%;
+}

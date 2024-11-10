@@ -2,7 +2,8 @@
   @include link-reset;
 
   padding: 22px 10px;
-  border: 2px solid $white-color;
+  outline: 2px solid $white-color;
+  outline-offset: -2px;
 
   font-weight: 700;
   font-size: 12px;
@@ -10,4 +11,94 @@
   text-transform: uppercase;
   text-align: center;
   color: $white-color;
+  background-color: transparent;
+  transition: color 0.3s, outline 0.3s, background-color 0.3s;
+
+  &:hover {
+    color: $accent-text-color;
+    background-color: $white-color;
+  }
+
+  &:focus {
+    outline: 2px solid $main-text-color;
+    color: $accent-text-color;
+    background-color: $white-color;
+  }
+
+  &:active {
+    color: $main-text-color;
+    outline: 2px solid $white-color;
+  }
+
+  &:not([href]) {
+    opacity: 0.5;
+  }
+
+  &:not([href]):hover {
+    opacity: 0.5;
+    color: $white-color;
+    outline: 2px solid $white-color;
+    background-color: transparent;
+  }
+}
+
+.button--has-background {
+  @include link-reset;
+
+  position: relative;
+
+  outline: 2px solid $main-text-color;
+  outline-offset: -2px;
+  z-index: 1;
+
+  &:hover {
+    outline: 2px solid transparent;
+    color: $white-color;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    outline: 2px solid $main-text-color;
+    color: $white-color;
+
+    &::before {
+      opacity: 0.8;
+    }
+  }
+
+  &:active {
+    color: $white-color-op07;
+    outline: 2px solid transparent;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    opacity: 0;
+    background: $gradient-button-bg;
+    transition: opacity 0.3s;
+    z-index: -1;
+  }
+
+  &:not([href]) {
+    opacity: 0.3;
+  }
+
+  &:not([href]):hover {
+    opacity: 0.3;
+    color: $main-text-color;
+    outline: 2px solid $main-text-color;
+
+    &::before {
+      opacity: 0;
+    }
+  }
 }

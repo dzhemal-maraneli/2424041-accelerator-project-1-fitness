@@ -13,10 +13,15 @@
 @mixin button-reset {
   padding: 0;
   border: none;
-  font: inherit;
+  font-family: inherit;
   color: inherit;
   background-color: transparent;
   cursor: pointer;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
 @mixin flex-column-center {

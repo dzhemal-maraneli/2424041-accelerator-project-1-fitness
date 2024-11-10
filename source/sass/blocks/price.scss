@@ -175,14 +175,6 @@
 }
 
 .price__tariffs-link {
-  @include link-reset;
-
   min-width: 206px;
-  padding: 25px 10px;
-  font-size: 12px;
-  line-height: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  border: 2px solid $main-text-color;
-  z-index: 1;
+  padding: 27px 10px;
 }
