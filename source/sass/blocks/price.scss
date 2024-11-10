@@ -1,0 +1,188 @@
+.price {
+  background-color: $primary-bg;
+  text-align: center;
+}
+
+.price__conatiner {
+  @include flex-column-center;
+
+  gap: 30px;
+}
+
+.price__time-list {
+  @include list-reset;
+  @include flex-space-between-center;
+
+  gap: 20px;
+  width: 290px;
+  border-bottom: 2px solid $price-border;
+
+
+  @media (min-width: $tablet-width) {
+    width: 310px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
+  }
+}
+
+.price__time-button {
+  @include button-reset;
+
+  padding-bottom: 10px;
+
+  font-size: 16px;
+  line-height: 16px;
+  color: $main-text-color-light;
+}
+
+.price__time-button--active {
+  color: $main-text-color;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: $active-tab-color;
+  }
+}
+
+.price__tariffs-list {
+  @include list-reset;
+  @include flex-column-center;
+
+  gap: 35px;
+
+  @media (min-width: $tablet-width) {
+    gap: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.price__tariffs-item {
+  @include flex-column-center;
+
+  gap: 18px;
+  position: relative;
+  width: 290px;
+
+  padding: 50px 42px;
+  background: $outline-gradient;
+  transition: background-color 0.3s;
+
+  &:focus-within {
+    &::before {
+      outline: 9px solid transparent;
+    }
+  }
+
+  &:hover {
+    &::before {
+      outline: 9px solid transparent;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: calc(100% - 14px);
+    height: calc(100% - 14px);
+    top: 50%;
+    left: 50%;
+    background-color: $white-color;
+    transform: translate(-50%, -50%);
+    outline: 9px solid $white-color;
+    outline-offset: -1px;
+    transition: outline 0.3s;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 65px;
+    gap: 22px;
+    width: 380px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 17px;
+    width: 360px;
+  }
+}
+
+.price__tariffs-title {
+  margin: 0;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.price__tariffs-period {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.price__tariffs-price-wrapper {
+  position: relative;
+  padding-top: 90px;
+  z-index: 1;
+}
+
+.price__tariffs-price {
+  font-size: 48px;
+  line-height: 72px;
+  font-weight: 700;
+  color: $accent-text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 90px;
+  }
+}
+
+.price__tariffs-currency {
+  font-size: 48px;
+  color: $main-text-color;
+}
+
+.price__tariffs-price-bg {
+  position: absolute;
+  left: 50%;
+  top: 37px;
+  z-index: -1;
+
+  font-size: 100px;
+  line-height: 1;
+  font-weight: 700;
+  color: $price-shadow;
+
+  transform: translateX(-50%);
+}
+
+.price__tariffs-link {
+  @include link-reset;
+
+  min-width: 206px;
+  padding: 25px 10px;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid $main-text-color;
+  z-index: 1;
+}

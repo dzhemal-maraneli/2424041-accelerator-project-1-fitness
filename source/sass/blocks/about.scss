@@ -1,0 +1,165 @@
+.about {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 120px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 240px;
+  }
+}
+
+
+.about__container {
+  @include flex-column-center;
+
+  gap: 36px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 103px;
+    flex-direction: row;
+    gap: 145px;
+  }
+}
+
+.about__text-content {
+  padding: 0 15px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    text-align: center;
+    width: 502px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    width: auto;
+  }
+}
+
+.about__title {
+  margin-bottom: 12px;
+}
+
+.about__subtitle {
+  display: block;
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 36px;
+}
+
+.about__text-content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 15px;
+
+  &:last-child {
+    display: none;
+    margin-bottom: 0;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.about__img-wrapper {
+  width: 320px;
+  height: 280px;
+  background-color: $second-bg;
+  flex-shrink: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 678px;
+    height: 345px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 660px;
+    height: 400px;
+  }
+}
+
+.about__img {
+  width: 100%;
+}
+
+.about__video {
+  position: relative;
+
+  width: 320px;
+  height: 170px;
+  background-color: $second-bg;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 270px;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 125px;
+
+    width: 360px;
+    height: 230px;
+  }
+}
+
+.about__video-link {
+  @include link-reset;
+
+  width: 100%;
+  height: 100%;
+}
+
+.about__video-play-button {
+  @include button-reset;
+  @include flex-center-center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: $gradient-button-bg;
+
+  transform: translate(-50%, -50%);
+
+  @media (min-width: $tablet-width) {
+    width: 72px;
+    height: 72px;
+  }
+
+  &::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: $white-color;
+    mask-image: url("/__spritemap#sprite-play-icon-view");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    @media (min-width: $tablet-width) {
+      width: 17px;
+      height: 17px;
+    }
+  }
+}

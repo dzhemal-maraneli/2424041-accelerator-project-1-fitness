@@ -1,5 +1,9 @@
 .header {
   @include flex-space-between-center;
 
-  padding: 30px 0;
+  padding: 16px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 0;
+  }
 }

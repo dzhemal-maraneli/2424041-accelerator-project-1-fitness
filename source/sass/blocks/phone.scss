@@ -5,4 +5,12 @@
   font-size: 22px;
   line-height: 22px;
   color: $white-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+  }
 }

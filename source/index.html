@@ -35,13 +35,24 @@
           <a class="hero__offer-link button" href="#">Купить абонемент</a>
         </div>
 
-        <img class="hero__img" src="#" alt="">
+        <div class="hero__img-wrapper">
+          <picture>
+            <source media="(min-width: 1366px)" width="500" height="524" type="image/webp"
+              srcset="img/hero/hero-img-desktop@1x.webp 1x, img/hero/hero-img-desktop@2x.webp 2x">
+            <source width="324" height="390" type="image/webp"
+              srcset="img/hero/hero-img-tablet@1x.webp 1x, img/hero/hero-img-tablet@2x.webp 2x">
+            <source media="(min-width: 1366px)" width="500" height="524" type="image/png"
+              srcset="img/hero/hero-img-desktop@1x.jpg 1x, img/hero/hero-img-desktop@2x.jpg 2x">
+            <img class="hero__img" src="img/hero/hero-img-tablet@1x.jpg" srcset="img/hero/hero-img-tablet@1x.jpg 2x"
+              width="324" height="390" alt="Мужчина в костюме Супермена смотрит вдаль.">
+          </picture>
+        </div>
       </div>
 
     </div>
   </section>
 
-  <section class="about" data-test="about">
+  <section class="about section" data-test="about">
     <div class="container about__container">
       <div class="about__text-content">
         <h2 class="about__title section-title">Тренажёрный зал</h2>
@@ -49,69 +60,94 @@
         <p>
           Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный
           зал оснащён всем необходимым современным оборудованием для всех спортсменов.
+        </p>
+        <p>
           В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре
           есть несколько оборудованных залов для различных видов групповых занятий.
         </p>
       </div>
 
-      <img class="about__img" src="#" alt="Фотография нашего тренажерного зала">
+      <div class="about__img-wrapper">
+        <picture>
+          <source media="(min-width: 1366px)" width="660" height="400" type="image/webp"
+            srcset="img/about/about-img-desktop@1x.webp 1x, img/about/about-img-desktop@2x.webp 2x">
+          <source media="(min-width: 768px)" width="678" height="345" type="image/webp"
+            srcset="img/about/about-img-tablet@1x.webp 1x, img/about/about-img-tablet@2x.webp 2x">
+          <source type="image/webp" width="280" height="280"
+            srcset="img/about/about-img-mobile@1x.webp 1x, img/about/about-img-mobile@2x.webp 2x">
+          <source media="(min-width: 1366px)" width="660" height="400" type="image/png"
+            srcset="img/about/about-img-desktop@1x.jpg 1x, img/about/about-img-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" width="678" height="345" type="image/png"
+            srcset="img/about/about-img-tablet@1x.jpg 1x, img/about/about-img-tablet@2x.jpg 2x">
+          <img class="about__img" src="img/about/about-img-mobile@1x.jpg" srcset="img/about/about-img-mobile@2x.jpg 2x"
+            width="320" height="280" alt="Фотография нашего тренажерного зала">
+        </picture>
+      </div>
 
-      <div class="about__video">Заглушка для видео</div>
+      <div class="about__video">
+        <a class="about__video-link" href="https://www.youtube.com/watch?v=9TZXsZItgdw&ab_channel=HTMLAcademy"></a>
+        <button class="about__video-play-button">
+          <span class="visually-hidden">Запустить видео</span>
+        </button>
+      </div>
     </div>
   </section>
 
 
-  <section class="price" data-test="price">
+  <section class="price section" data-test="price">
     <div class="container price__conatiner">
       <h2 class="price__title section-title">Абонементы</h2>
 
       <ul class="price__time-list">
         <li class="price__time-item">
-          <button class="price__time-button">1 месяц</button>
+          <button class="price__time-button price__time-button--active" data-time="1">1 месяц</button>
         </li>
         <li class="price__time-item">
-          <button class="price__time-button">6 месяцев</button>
+          <button class="price__time-button" data-time="6">6 месяцев</button>
         </li>
         <li class="price__time-item">
-          <button class="price__time-button">12 месяцев</button>
+          <button class="price__time-button" data-time="12">12 месяцев</button>
         </li>
       </ul>
 
       <ul class="price__tariffs-list">
-        <li class="price__tariffs-item">
+        <li class="price__tariffs-item" data-name="personal-trainer">
           <h3 class="price__tariffs-title">С тренером</h3>
           <span class="price__tariffs-period">12 занятий</span>
-          <span class="price__tariffs-price">
-            5000
+          <div class="price__tariffs-price-wrapper">
+            <span class="price__tariffs-price">5000</span>
             <span class="price__tariffs-currency">₽</span>
-          </span>
+            <span class="price__tariffs-price-bg" aria-hidden="true">5000</span>
+          </div>
           <a class="price__tariffs-link" href="">Купить абонемент</a>
         </li>
 
-        <li class="price__tariffs-item">
+        <li class="price__tariffs-item" data-name="daytime">
           <h3 class="price__tariffs-title">Дневной</h3>
           <span class="price__tariffs-period">с 8:00 до 17:00</span>
-          <span class="price__tariffs-price">
-            1700
+          <div class="price__tariffs-price-wrapper">
+            <span class="price__tariffs-price">1700</span>
             <span class="price__tariffs-currency">₽</span>
-          </span>
+            <span class="price__tariffs-price-bg" aria-hidden="true">1700</span>
+          </div>
           <a class="price__tariffs-link" href="">Купить абонемент</a>
         </li>
 
-        <li class="price__tariffs-item">
+        <li class="price__tariffs-item" data-name="all-day">
           <h3 class="price__tariffs-title">Полный день</h3>
           <span class="price__tariffs-period">с 8:00 до 22:00</span>
-          <span class="price__tariffs-price">
-            2700
+          <div class="price__tariffs-price-wrapper">
+            <span class="price__tariffs-price">2700</span>
             <span class="price__tariffs-currency">₽</span>
-          </span>
+            <span class="price__tariffs-price-bg" aria-hidden="true">2700</span>
+          </div>
           <a class="price__tariffs-link" href="">Купить абонемент</a>
         </li>
       </ul>
     </div>
   </section>
 
-  <section class="games" data-test="games">
+  <!-- <section class="games section" data-test="games">
     <h2 class="visually-hidden">Дата и время наших ближайших соревнований по CrossFit</h2>
     <div class="container games__container">
       <div class="games__content">
@@ -124,16 +160,17 @@
 
       <img class="games__img" src="#" alt="">
     </div>
-  </section>
+  </section> -->
 
 
-  <div data-test="juri">juri</div>
+  <!-- <div data-test="juri">juri</div>
   <div data-test="features">features</div>
   <div data-test="offers">offers</div>
   <div data-test="faq">faq</div>
   <div data-test="reviews">reviews</div>
   <div data-test="form">form</div>
-  <div data-test="footer">footer</div>
+  <div data-test="footer">footer</div> -->
+
   <script type="module" src="js/main.js"></script>
 </body>
 

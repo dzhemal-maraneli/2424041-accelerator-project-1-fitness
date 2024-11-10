@@ -10,6 +10,27 @@
   list-style: none;
 }
 
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin flex-space-between-center {
   display: flex;
   justify-content: space-between;
