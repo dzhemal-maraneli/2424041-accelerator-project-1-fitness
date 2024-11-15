@@ -1,40 +1,120 @@
 .price {
+  position: relative;
   background-color: $primary-bg;
   text-align: center;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 275px;
+      height: 328px;
+      bottom: 12px;
+      right: -13px;
+
+      background-image:
+        image-set(url("../img/price/price-bg-tablet@1x.webp") 1x type("image/webp"),
+        url("../img/price/price-bg-tablet@2x.webp") 2x type("image/webp"),
+        url("../img/price/price-bg-tablet@1x.png") 1x type("image/png"),
+        url("../img/price/price-bg-tablet@2x.png") 2x type("image/png"));
+
+      background-repeat: no-repeat;
+
+      transform: rotate(-30deg);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      width: 321px;
+      height: 384px;
+      bottom: 8px;
+      right: -90px;
+
+      background-image:
+        image-set(url("../img/price/price-bg-desktop@1x.webp") 1x type("image/webp"),
+        url("../img/price/price-bg-desktop@2x.webp") 2x type("image/webp"),
+        url("../img/price/price-bg-desktop@1x.png") 1x type("image/png"),
+        url("../img/price/price-bg-desktop@2x.png") 2x type("image/png"));
+    }
+  }
 }
 
 .price__conatiner {
   @include flex-column-center;
+}
 
-  gap: 30px;
+.price__title {
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 54px;
+    line-height: 54px;
+  }
 }
 
 .price__time-list {
   @include list-reset;
-  @include flex-space-between-center;
+  @include flex-space-between;
 
+  position: relative;
   gap: 20px;
+  padding: 30px 0 32px;
   width: 290px;
-  border-bottom: 2px solid $price-border;
 
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: 30px;
+    background-color: $price-border;
+  }
 
   @media (min-width: $tablet-width) {
+    padding: 35px 0 45px;
     width: 310px;
+
+    &::before {
+      bottom: 43px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 350px;
+    padding: 20px 0 40px;
+
+    &::before {
+      bottom: 40px;
+    }
   }
 }
 
 .price__time-button {
   @include button-reset;
 
-  padding-bottom: 10px;
+  padding-bottom: 4px;
+  height: 100%;
+  vertical-align: top;
 
   font-size: 16px;
   line-height: 16px;
   color: $main-text-color-light;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .price__time-button--active {
@@ -123,6 +203,16 @@
   line-height: 22px;
   font-weight: 700;
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+    line-height: 26px;
+  }
 }
 
 .price__tariffs-period {
@@ -139,42 +229,78 @@
 
 .price__tariffs-price-wrapper {
   position: relative;
-  padding-top: 90px;
+  width: 100%;
+  padding-top: 48px;
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+  }
 }
 
 .price__tariffs-price {
+  position: relative;
+  padding-right: 34px;
   font-size: 48px;
   line-height: 72px;
   font-weight: 700;
   color: $accent-text-color;
 
+  &::after {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 35px;
+    top: 50%;
+    right: -5px;
+    transform: translateY(-50%);
+    background-image: url("/__spritemap#sprite-rubble-icon-view");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 90px;
-  }
-}
+    padding-right: 43px;
 
-.price__tariffs-currency {
-  font-size: 48px;
-  color: $main-text-color;
+    &::after {
+      width: 45px;
+      height: 45px;
+      right: -8px;
+    }
+  }
 }
 
 .price__tariffs-price-bg {
   position: absolute;
   left: 50%;
-  top: 37px;
+  top: 0;
   z-index: -1;
 
-  font-size: 100px;
-  line-height: 1;
+  font-size: 80px;
+  line-height: 120px;
   font-weight: 700;
   color: $price-shadow;
 
   transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
+    font-size: 100px;
+    line-height: 150px;
+  }
 }
 
 .price__tariffs-link {
-  min-width: 206px;
+  width: 206px;
   padding: 27px 10px;
+
+  @media (min-width: $tablet-width) {
+    width: 250px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 230px;
+  }
 }

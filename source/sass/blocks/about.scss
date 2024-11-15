@@ -58,7 +58,7 @@
   margin: 0;
   font-size: 14px;
   line-height: 22px;
-  margin-bottom: 15px;
+  font-weight: 300;
 
   &:last-child {
     display: none;
@@ -72,6 +72,7 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 15px;
   }
 }
 

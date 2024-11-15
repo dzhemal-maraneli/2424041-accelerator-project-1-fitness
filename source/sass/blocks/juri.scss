@@ -1,0 +1,101 @@
+.juri {}
+
+.juri__container {
+  @include flex-column-center;
+
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 46px;
+  }
+}
+
+.juri__swiper {
+  width: 100%;
+}
+
+.juri__list {
+  @include list-reset;
+}
+
+.juri__item {
+  position: relative;
+  width: 260px;
+  height: 300px;
+
+  &:hover {
+    .juri__description-wrapper {
+      background-color: $juri-item-bg;
+    }
+
+    .juri__item-title {
+      bottom: calc(100% - 45px);
+    }
+
+    .juri__description {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.juri__img-wrapper {
+  width: 260px;
+  height: 300px;
+}
+
+.juri__img {
+  display: block;
+}
+
+.juri__item-title {
+  color: $white-color;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 0;
+
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: bottom 0.2s;
+}
+
+.juri__description-wrapper {
+  position: absolute;
+  inset: 0;
+  color: $white-color;
+  background-color: transparent;
+  z-index: 1;
+  padding: 76px 42px 20px;
+
+  transition: background-color 0.3s;
+}
+
+.juri__description {
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity 0.8s;
+}
+
+.juri__trainer-type {}
+
+.juri__trainer-list {
+  list-style-type: disc;
+  padding: 0;
+}
+
+.juri__trainer-item {
+  font-size: 14px;
+  line-height: 22px;
+
+  &::marker {
+    font-size: 1em;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
