@@ -1,0 +1,30 @@
+.nav__list {
+  @include list-reset;
+  @include flex-start-center;
+
+  flex-wrap: wrap;
+  gap: 20px 35px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    width: 392px;
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+  }
+}
+
+.nav__link {
+  @include link-reset;
+
+  color: $white-color;
+
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    line-height: 22px;
+  }
+}
