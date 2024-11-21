@@ -1,0 +1,76 @@
+.form {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form__form-wrapper {
+  background-color: $main-text-color;
+  padding: 70px 15px;
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+    padding: 60px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding: 60px 103px;
+    text-align: left;
+  }
+}
+
+.form__title {
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 54px;
+    line-height: 54px;
+  }
+}
+
+.form__box {
+  @include flex-column;
+
+  gap: 36px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 205px 205px;
+    grid-template-rows: auto auto;
+    column-gap: 30px;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form__input {
+  background-color: transparent;
+  border: none;
+  padding: 0 0 4px;
+  border-bottom: 1px solid $contacts-divider;
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.form__button {
+  width: 100%;
+  padding: 22px 0;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    padding: 25px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+
+  }
+}

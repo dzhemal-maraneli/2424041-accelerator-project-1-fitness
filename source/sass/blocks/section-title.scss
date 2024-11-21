@@ -5,6 +5,10 @@
   font-size: 32px;
   line-height: 32px;
 
+  &--dark-bg {
+    color: $white-color;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 42px;
     line-height: 42px;

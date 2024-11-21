@@ -162,6 +162,11 @@
       url("../img/about/video-img-desktop@1x.png") 1x type("image/png"),
       url("../img/about/video-img-desktop@2x.png") 2x type("image/png"));
   }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .about__video-link {
@@ -184,6 +189,9 @@
   border-radius: 50%;
   background: $gradient-button-bg;
 
+  outline: 2px solid $accent-bg-op-02;
+  outline-offset: 8px;
+
   transform: translate(-50%, -50%);
 
   &::before {
@@ -200,10 +208,16 @@
       width: 17px;
       height: 17px;
     }
+
+    @media (min-width: $desktop-width) {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 72px;
     height: 72px;
+    outline-offset: 12px;
   }
 }

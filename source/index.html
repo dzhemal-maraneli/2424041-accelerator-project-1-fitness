@@ -78,7 +78,8 @@
           </picture>
         </div>
         <div class="about__video">
-          <a class="about__video-link" href="https://www.youtube.com/watch?v=9TZXsZItgdw&ab_channel=HTMLAcademy"></a>
+          <a class="about__video-link" href="https://www.youtube.com/watch?v=9TZXsZItgdw&ab_channel=HTMLAcademy"
+            target="_blank"></a>
           <button class="about__video-play-button">
             <span class="visually-hidden">Запустить видео</span>
           </button>
@@ -363,7 +364,47 @@
 
     <section class="reviews" data-test="reviews"></section>
 
-    <section class="form" data-test="form"></section>
+    <section class="form" data-test="form">
+      <div class="form__form-wrapper">
+        <h3 class="form__title section-title section-title--dark-bg">Бесплатное занятие</h3>
+
+        <form class="form__box" method="post" action="https://echo.htmlacademy.ru">
+          <input class="form__input" type="text" id="name" placeholder="Имя">
+
+          <input class="form__input" type="text" id="number" placeholder="Телефон">
+
+          <button class="form__button button">Отправить</button>
+        </form>
+      </div>
+
+      <div class="contacts">
+        <div class="contacts__container container">
+          <h2 class="contacts__title section-title">Контакты</h2>
+          <address class="contacts__lists-wrapper">
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <h3 class="contacts__item-title">Адрес:</h3>
+                <p class="contacts__item-text">г. Омск, ул. 60 лет Октября, 7</p>
+              </li>
+              <li class="contacts__item">
+                <h3 class="contacts__item-title">График работы:</h3>
+                <p class="contacts__item-text">Пн-Вс: с 8:00 до 22:00</p>
+              </li>
+            </ul>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <h3 class="contacts__item-title">Телефон:</h3>
+                <a class="contacts__item-link">8 800 555-55-55</a>
+              </li>
+              <li class="contacts__item">
+                <h3 class="contacts__item-title">Email:</h3>
+                <a class="contacts__item-link">oмск@supergym.ru</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer" data-test="footer">
