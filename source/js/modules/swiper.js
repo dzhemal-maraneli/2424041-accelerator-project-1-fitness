@@ -1,16 +1,26 @@
-import Swiper from 'swiper/bundle';
-import '../../sass/vendor/swiper.css';
+import Swiper from 'swiper';
+import 'swiper/css';
+import { Navigation } from 'swiper/modules';
 
-const swiper = new Swiper('.juri__swiper', {
+const reviewsSwiper = new Swiper('.reviews__slider-wrapper', {
+  modules: [Navigation],
   direction: 'horizontal',
-  loop: true,
-  slideClass: 'juri__item',
   slidesPerView: 1,
   spaceBetween: 30,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.reviews__button--next',
+    prevEl: '.reviews__button--prev',
   },
+});
+
+const juriSwiper = new Swiper('.juri__slider-wrapper', {
+  modules: [Navigation],
+  direction: 'horizontal',
+  slidesPerView: 1,
+  spaceBetween: 40,
+  // navigation: {
+  //   nextEl: '.reviews__button--next',
+  //   prevEl: '.reviews__button--prev',
   breakpoints: {
     768: {
       slidesPerView: 2,

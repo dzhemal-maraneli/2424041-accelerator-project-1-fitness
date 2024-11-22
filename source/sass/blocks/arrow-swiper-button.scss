@@ -1,0 +1,133 @@
+.arrow-swiper-button {
+  @include button-reset;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+
+  &::before {
+    content: "";
+    width: 16px;
+    height: 32px;
+    background-color: $main-text-color;
+    mask-image: url("/__spritemap#sprite-arrow-icon-view");
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: background-color 0.3s;
+  }
+
+  &:hover {
+    border: 1px solid $main-text-color;
+  }
+
+  &:focus {
+    border: 1px solid $main-text-color;
+    background-color: $price-shadow;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $main-text-color;
+
+    &::before {
+      background-color: $white-color;
+    }
+  }
+
+  &:disabled {
+    &::before {
+      opacity: 0.2;
+    }
+
+    &:hover {
+      border: 1px solid transparent;
+      background-color: transparent;
+    }
+  }
+}
+
+
+// .arrow-swiper-button {
+//   @include button-reset;
+
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   position: absolute;
+//   z-index: 1;
+
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 50%;
+//   top: 50%;
+//   border: 1px solid transparent;
+//   transform: translateY(-50%) rotate(180deg);
+//   transition: background-color 0.3s, border-color 0.3s;
+
+//   &::before {
+//     content: "";
+//     width: 16px;
+//     height: 32px;
+//     background-color: $main-text-color;
+//     mask-image: url("/__spritemap#sprite-arrow-icon-view");
+//     mask-size: cover;
+//     mask-repeat: no-repeat;
+//     mask-position: center;
+//     transition: background-color 0.3s;
+//   }
+
+//   &--prev {
+//     left: -14px;
+
+//     @media (min-width: $desktop-width) {
+//       left: 240px;
+//     }
+//   }
+
+//   &--next {
+//     transform: translateY(-50%) rotate(0deg);
+//     right: -14px;
+
+//     @media (min-width: $desktop-width) {
+//       right: 240px;
+//     }
+//   }
+
+//   &:hover {
+//     border: 1px solid $main-text-color;
+//   }
+
+//   &:focus {
+//     border: 1px solid $main-text-color;
+//     background-color: $price-shadow;
+//     outline: none;
+//   }
+
+//   &:active {
+//     background-color: $main-text-color;
+
+//     &::before {
+//       background-color: $white-color;
+//     }
+//   }
+
+//   &:disabled {
+//     &::before {
+//       opacity: 0.2;
+//     }
+
+//     &:hover {
+//       border: 1px solid transparent;
+//       background-color: transparent;
+//     }
+//   }
+// }

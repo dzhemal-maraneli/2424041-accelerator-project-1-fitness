@@ -1,24 +1,47 @@
-.juri {}
-
-.juri__container {
-  @include flex-column-center;
-
-  gap: 20px;
+.juri {
+  text-align: center;
+  padding-top: 40px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 46px;
+    padding-top: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
   }
 }
 
-.juri__swiper {
-  width: 100%;
+.juri__title {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 46px;
+    font-size: 54px;
+    line-height: 54px;
+  }
+}
+
+.juri__box {
+  position: relative;
+}
+
+.juri__slider-wrapper {
+  width: 260px;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1160px;
+  }
 }
 
 .juri__list {
   @include list-reset;
 }
 
-.juri__item {
+.juri__list .juri__item {
   position: relative;
   width: 260px;
   height: 300px;
@@ -52,7 +75,9 @@
   color: $white-color;
   font-size: 22px;
   line-height: 22px;
+  font-weight: 400;
   margin: 0;
+  width: 100%;
 
   position: absolute;
   bottom: 25px;
@@ -79,8 +104,6 @@
   transition: opacity 0.8s;
 }
 
-.juri__trainer-type {}
-
 .juri__trainer-list {
   list-style-type: disc;
   padding: 0;
@@ -97,5 +120,38 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+.juri__button {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    z-index: 1;
+
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  @media (min-width: $desktop-width) {
+    top: calc(50% - 3px);
+  }
+
+  &--prev {
+    left: -14px;
+
+    @media (min-width: $desktop-width) {
+      left: -70px;
+    }
+  }
+
+  &--next {
+    transform: translateY(-50%) rotate(0deg);
+    right: -14px;
+
+    @media (min-width: $desktop-width) {
+      right: -70px;
+    }
   }
 }

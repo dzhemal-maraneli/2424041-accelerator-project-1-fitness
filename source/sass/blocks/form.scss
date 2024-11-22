@@ -1,12 +1,13 @@
 .form {
+  background-color: $main-text-color;
+
   @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
   }
 }
 
 .form__form-wrapper {
-  background-color: $main-text-color;
   padding: 70px 15px;
 
   @media (min-width: $tablet-width) {
@@ -15,9 +16,17 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 100%;
     padding: 60px 103px;
     text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.form__form-inner {
+  @media (min-width: $desktop-width) {
+    width: 477px;
   }
 }
 
@@ -31,8 +40,8 @@
 }
 
 .form__box {
-  @include flex-column;
-
+  display: flex;
+  flex-direction: column;
   gap: 36px;
 
   @media (min-width: $tablet-width) {
@@ -61,16 +70,15 @@
 }
 
 .form__button {
+  @include button-reset;
+
   width: 100%;
-  padding: 22px 0;
+  padding: 24px 0;
+  color: $white-color;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
-    padding: 25px 0;
-  }
-
-  @media (min-width: $desktop-width) {
-
+    padding: 27px 0;
   }
 }

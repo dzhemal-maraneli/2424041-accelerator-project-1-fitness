@@ -42,12 +42,16 @@
 }
 
 .price__conatiner {
-  @include flex-column-center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .price__time-list {
   @include list-reset;
-  @include flex-space-between;
+
+  display: flex;
+  justify-content: space-between;
 
   position: relative;
   gap: 20px;
@@ -123,8 +127,10 @@
 
 .price__tariffs-list {
   @include list-reset;
-  @include flex-column-center;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 35px;
 
   @media (min-width: $tablet-width) {
@@ -137,9 +143,11 @@
 }
 
 .price__tariffs-item {
-  @include flex-column-center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 18px;
+
   position: relative;
   width: 290px;
 

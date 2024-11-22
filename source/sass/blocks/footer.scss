@@ -12,7 +12,8 @@
 }
 
 .footer__container {
-  @include flex-column-start;
+  display: flex;
+  flex-direction: column;
 
   gap: 30px;
 
@@ -24,7 +25,9 @@
 
 .footer__social {
   @include list-reset;
-  @include flex-start-center;
+
+  display: flex;
+  align-items: center;
 
   gap: 20px;
 
@@ -39,7 +42,10 @@
 
 .footer__social-link {
   @include link-reset;
-  @include flex-center-center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   width: 25px;
   height: 25px;

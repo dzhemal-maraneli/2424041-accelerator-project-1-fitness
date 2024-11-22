@@ -21,13 +21,15 @@
 }
 
 .hero-header__container {
-  @include flex-space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .hero__container {
   @media (min-width: $tablet-width) {
-    @include flex-center-center;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
   }
 

@@ -11,7 +11,8 @@
 }
 
 .games__container {
-  @include flex-column;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -19,7 +20,9 @@
 }
 
 .games__content {
-  @include flex-column-center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   flex-grow: 1;
   gap: 16px;
@@ -40,7 +43,8 @@
 }
 
 .games__box {
-  @include flex-space-between;
+  display: flex;
+  justify-content: space-between;
 
   gap: 37px;
   width: 100%;
@@ -70,8 +74,9 @@
 
 .games__list {
   @include list-reset;
-  @include flex-column;
 
+  display: flex;
+  flex-direction: column;
   gap: 5px;
 
   @media (min-width: $tablet-width) {
@@ -86,8 +91,8 @@
 }
 
 .games__item {
-  @include flex-column;
-
+  display: flex;
+  flex-direction: column;
   gap: 2px;
 }
 

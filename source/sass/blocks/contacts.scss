@@ -1,19 +1,23 @@
 .contacts {
   background-color: $white-color;
-  padding: 40px 0;
+  padding: 40px 15px;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 0;
+    padding: 60px 164px;
     text-align: center;
   }
 
   @media (min-width: $desktop-width) {
     text-align: left;
+    padding: 60px 103px;
+    width: 100%;
   }
 }
 
-.contacts__container {
-  width: auto;
+.contacts__wrapper {
+  @media (min-width: $desktop-width) {
+    width: 477px;
+  }
 }
 
 .contacts__title {
@@ -27,7 +31,8 @@
 }
 
 .contacts__lists-wrapper {
-  @include flex-column;
+  display: flex;
+  flex-direction: column;
 
   gap: 28px;
   font-style: normal;
@@ -46,8 +51,9 @@
 
 .contacts__list {
   @include list-reset;
-  @include flex-column;
 
+  display: flex;
+  flex-direction: column;
   gap: 28px;
 
   @media (min-width: $tablet-width) {
@@ -77,8 +83,8 @@
 }
 
 .contacts__item {
-  @include flex-column;
-
+  display: flex;
+  flex-direction: column;
   gap: 12px;
 
   @media (min-width: $tablet-width) {
