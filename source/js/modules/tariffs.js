@@ -10,35 +10,39 @@ function getActiveButton() {
   timeActiveButton = document.querySelector('.price__time-button--active');
 }
 
-timeButtons.forEach((button) => {
-  button.addEventListener('click', (evt) => {
-    getActiveButton();
+function tariffsPriceChanger() {
+  timeButtons.forEach((button) => {
+    button.addEventListener('click', (evt) => {
+      getActiveButton();
 
-    if (evt.target !== timeActiveButton) {
-      timeActiveButton.classList.remove('price__time-button--active');
-      evt.target.classList.add('price__time-button--active');
+      if (evt.target !== timeActiveButton) {
+        timeActiveButton.classList.remove('price__time-button--active');
+        evt.target.classList.add('price__time-button--active');
 
-      const time = evt.target.getAttribute('data-time');
+        const time = evt.target.getAttribute('data-time');
 
-      tariffsCards.forEach((item) => {
-        const tariff = item.getAttribute('data-name');
-        const price = item.querySelector('.price__tariffs-price');
+        tariffsCards.forEach((item) => {
+          const tariff = item.getAttribute('data-name');
+          const price = item.querySelector('.price__tariffs-price');
 
-        switch (tariff) {
-          case 'personal-trainer':
-            price.setAttribute('data-price', (personalTrainerPrice * time));
-            price.textContent = price.getAttribute('data-price');
-            break;
-          case 'daytime':
-            price.setAttribute('data-price', (daytimePrice * time));
-            price.textContent = price.getAttribute('data-price');
-            break;
-          case 'all-day':
-            price.setAttribute('data-price', (allDayPrice * time));
-            price.textContent = price.getAttribute('data-price');
-            break;
-        }
-      });
-    }
+          switch (tariff) {
+            case 'personal-trainer':
+              price.setAttribute('data-price', (personalTrainerPrice * time));
+              price.textContent = price.getAttribute('data-price');
+              break;
+            case 'daytime':
+              price.setAttribute('data-price', (daytimePrice * time));
+              price.textContent = price.getAttribute('data-price');
+              break;
+            case 'all-day':
+              price.setAttribute('data-price', (allDayPrice * time));
+              price.textContent = price.getAttribute('data-price');
+              break;
+          }
+        });
+      }
+    });
   });
-});
+}
+
+tariffsPriceChanger();
