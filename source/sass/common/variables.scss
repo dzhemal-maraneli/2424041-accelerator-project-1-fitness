@@ -9,6 +9,7 @@ $white-color-op08: rgba(255, 255, 255, 0.8);
 $main-text-color: #102654;
 $desc-text-color: #2e35ac;
 $main-text-color-light: rgba(16, 38, 84, 0.5);
+$tab-border-color: rgba(16, 38, 84, 0.2);
 $accent-text-color: #103aae;
 $hero-bg: linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
 $primary-bg: #f8f9fc;
@@ -24,7 +25,7 @@ $gradient-button-bg: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
 $outline-gradient: linear-gradient(136deg, #d10a42 0%, #00359f 100%);
 $features-gradient: linear-gradient(129deg, #d10a42 0%, #0041ca 100%);
 $features-bivider-color: rgba(209, 10, 66, 0.2);
-$contacts-divider: #74819c;
+$divider-color: #74819c;
 
 /* VIEWPORTS */
 $mobile-width: 320px;

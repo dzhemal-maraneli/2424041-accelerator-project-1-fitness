@@ -13,7 +13,7 @@
 
   <header class="hero" data-test="hero">
     <div class="hero__header">
-      <div class="container hero-header__container">
+      <div class="container hero__header-container">
         <img class="logo" src="./img/logo.svg" width="100" height="20" alt="Логотип тренажерного зала SUPERGYM">
         <a class="phone" href="#">8 800 555-55-55</a>
       </div>
@@ -106,8 +106,7 @@
             <h3 class="price__tariffs-title">С тренером</h3>
             <span class="price__tariffs-period">12 занятий</span>
             <div class="price__tariffs-price-wrapper">
-              <span class="price__tariffs-price">5000</span>
-              <span class="price__tariffs-price-bg" aria-hidden="true">5000</span>
+              <span class="price__tariffs-price" data-price="5000">5000</span>
             </div>
             <a class="price__tariffs-link button button--has-background" href="#">Купить абонемент</a>
           </li>
@@ -115,8 +114,7 @@
             <h3 class="price__tariffs-title">Дневной</h3>
             <span class="price__tariffs-period">с 8:00 до 17:00</span>
             <div class="price__tariffs-price-wrapper">
-              <span class="price__tariffs-price">1700</span>
-              <span class="price__tariffs-price-bg" aria-hidden="true">1700</span>
+              <span class="price__tariffs-price" data-price="1700">1700</span>
             </div>
             <a class="price__tariffs-link button button--has-background" href="#">Купить абонемент</a>
           </li>
@@ -124,8 +122,7 @@
             <h3 class="price__tariffs-title">Полный день</h3>
             <span class="price__tariffs-period">с 8:00 до 22:00</span>
             <div class="price__tariffs-price-wrapper">
-              <span class="price__tariffs-price">2700</span>
-              <span class="price__tariffs-price-bg" aria-hidden="true">2700</span>
+              <span class="price__tariffs-price" data-price="2700">2700</span>
             </div>
             <a class="price__tariffs-link button button--has-background" href="#">Купить абонемент</a>
           </li>
@@ -136,7 +133,7 @@
     <section class="games section" data-test="games">
       <h2 class="visually-hidden">Дата и время наших ближайших соревнований по CrossFit</h2>
       <div class="container games__container">
-        <div class="games__content">
+        <div class="games__card">
           <div class="games__box">
             <h3 class="games__title" lang="en">SUPER <br> GAMES</h3>
             <ul class="games__list">
@@ -172,7 +169,7 @@
             <source media="(min-width: 768px)" width="378" height="348" type="image/png"
               srcset="img/games/games-tablet@1x.png 1x, img/games/games-tablet@2x.png 2x">
             <img class="games__img" src="img/games/games-mobile@1x.png" srcset="img/games/games-mobile@2x.png 2x"
-              width="290" height="290" alt="Фотография нашего тренажерного зала">
+              width="290" height="290" alt="Накачанный мужчина бъет в пол.">
           </picture>
         </div>
       </div>
@@ -183,15 +180,17 @@
         <h2 class="juri__title section-title">Жюри</h2>
 
         <div class="juri__box">
+          <button class="juri__button juri__button--prev arrow-swiper-button"></button>
+
           <div class="juri__slider-wrapper swiper">
             <ul class="juri__list swiper-wrapper">
-              <li class="juri__item swiper-slide">
+              <li class="juri__item swiper-slide" tabindex="0">
                 <div class="juri__img-wrapper">
                   <picture>
                     <source type="image/webp" width="260" height="300"
                       srcset="img/juri/juri-1@1x.webp 1x, img/juri/juri-1@2x.webp 2x">
-                    <img class="juri__img" src="img/juri/juri-1@1x.jpg" srcset="img/juri/juri-1@2x.jpg 2x"
-                      width="260" height="300" alt="Член жюри">
+                    <img class="juri__img" src="img/juri/juri-1@1x.jpg" srcset="img/juri/juri-1@2x.jpg 2x" width="260"
+                      height="300" alt="Член жюри">
                   </picture>
                 </div>
                 <div class="juri__description-wrapper">
@@ -207,13 +206,13 @@
                 </div>
               </li>
 
-              <li class="juri__item swiper-slide">
+              <li class="juri__item swiper-slide" tabindex="0">
                 <div class="juri__img-wrapper">
                   <picture>
                     <source type="image/webp" width="260" height="300"
                       srcset="img/juri/juri-2@1x.webp 1x, img/juri/juri-2@2x.webp 2x">
-                    <img class="juri__img" src="img/juri/juri-2@1x.jpg" srcset="img/juri/juri-2@2x.jpg 2x"
-                      width="260" height="300" alt="Член жюри">
+                    <img class="juri__img" src="img/juri/juri-2@1x.jpg" srcset="img/juri/juri-2@2x.jpg 2x" width="260"
+                      height="300" alt="Член жюри">
                   </picture>
                 </div>
                 <div class="juri__description-wrapper">
@@ -229,13 +228,13 @@
                 </div>
               </li>
 
-              <li class="juri__item swiper-slide">
+              <li class="juri__item swiper-slide" tabindex="0">
                 <div class="juri__img-wrapper">
                   <picture>
                     <source type="image/webp" width="260" height="300"
                       srcset="img/juri/juri-3@1x.webp 1x, img/juri/juri-3@2x.webp 2x">
-                    <img class="juri__img" src="img/juri/juri-3@1x.jpg" srcset="img/juri/juri-3@2x.jpg 2x"
-                      width="260" height="300" alt="Член жюри">
+                    <img class="juri__img" src="img/juri/juri-3@1x.jpg" srcset="img/juri/juri-3@2x.jpg 2x" width="260"
+                      height="300" alt="Член жюри">
                   </picture>
                 </div>
                 <div class="juri__description-wrapper">
@@ -251,13 +250,13 @@
                 </div>
               </li>
 
-              <li class="juri__item swiper-slide">
+              <li class="juri__item swiper-slide" tabindex="0">
                 <div class="juri__img-wrapper">
                   <picture>
                     <source type="image/webp" width="260" height="300"
                       srcset="img/juri/juri-4@1x.webp 1x, img/juri/juri-4@2x.webp 2x">
-                    <img class="juri__img" src="img/juri/juri-4@1x.jpg" srcset="img/juri/juri-4@2x.jpg 2x"
-                      width="260" height="300" alt="Член жюри">
+                    <img class="juri__img" src="img/juri/juri-4@1x.jpg" srcset="img/juri/juri-4@2x.jpg 2x" width="260"
+                      height="300" alt="Член жюри">
                   </picture>
                 </div>
                 <div class="juri__description-wrapper">
@@ -272,10 +271,97 @@
                   </div>
                 </div>
               </li>
+
+              <li class="juri__item swiper-slide" tabindex="0">
+                <div class="juri__img-wrapper">
+                  <picture>
+                    <source type="image/webp" width="260" height="300"
+                      srcset="img/juri/juri-3@1x.webp 1x, img/juri/juri-3@2x.webp 2x">
+                    <img class="juri__img" src="img/juri/juri-3@1x.jpg" srcset="img/juri/juri-3@2x.jpg 2x" width="260"
+                      height="300" alt="Член жюри">
+                  </picture>
+                </div>
+                <div class="juri__description-wrapper">
+                  <h3 class="juri__item-title">Александр Пашков</h3>
+                  <div class="juri__description">
+                    <span class="juri__trainer-type">CrossFit</span>
+                    <ul class="juri__trainer-list">
+                      <li class="juri__trainer-item">Certified Level 3 Trainer</li>
+                      <li class="juri__trainer-item">Победитель чемпионата России по CrossFit</li>
+                      <li class="juri__trainer-item">Опыт — 6 лет</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="juri__item swiper-slide" tabindex="0">
+                <div class="juri__img-wrapper">
+                  <picture>
+                    <source type="image/webp" width="260" height="300"
+                      srcset="img/juri/juri-1@1x.webp 1x, img/juri/juri-1@2x.webp 2x">
+                    <img class="juri__img" src="img/juri/juri-1@1x.jpg" srcset="img/juri/juri-1@2x.jpg 2x" width="260"
+                      height="300" alt="Член жюри">
+                  </picture>
+                </div>
+                <div class="juri__description-wrapper">
+                  <h3 class="juri__item-title">Анна Павлова</h3>
+                  <div class="juri__description">
+                    <span class="juri__trainer-type">CrossFit</span>
+                    <ul class="juri__trainer-list">
+                      <li class="juri__trainer-item">Certified Level 3 Trainer</li>
+                      <li class="juri__trainer-item">Победитель чемпионата России по CrossFit</li>
+                      <li class="juri__trainer-item">Опыт — 6 лет</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="juri__item swiper-slide" tabindex="0">
+                <div class="juri__img-wrapper">
+                  <picture>
+                    <source type="image/webp" width="260" height="300"
+                      srcset="img/juri/juri-4@1x.webp 1x, img/juri/juri-4@2x.webp 2x">
+                    <img class="juri__img" src="img/juri/juri-4@1x.jpg" srcset="img/juri/juri-4@2x.jpg 2x" width="260"
+                      height="300" alt="Член жюри">
+                  </picture>
+                </div>
+                <div class="juri__description-wrapper">
+                  <h3 class="juri__item-title">Мария Кетова</h3>
+                  <div class="juri__description">
+                    <span class="juri__trainer-type">CrossFit</span>
+                    <ul class="juri__trainer-list">
+                      <li class="juri__trainer-item">Certified Level 3 Trainer</li>
+                      <li class="juri__trainer-item">Победитель чемпионата России по CrossFit</li>
+                      <li class="juri__trainer-item">Опыт — 6 лет</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="juri__item swiper-slide" tabindex="0">
+                <div class="juri__img-wrapper">
+                  <picture>
+                    <source type="image/webp" width="260" height="300"
+                      srcset="img/juri/juri-2@1x.webp 1x, img/juri/juri-2@2x.webp 2x">
+                    <img class="juri__img" src="img/juri/juri-2@1x.jpg" srcset="img/juri/juri-2@2x.jpg 2x" width="260"
+                      height="300" alt="Член жюри">
+                  </picture>
+                </div>
+                <div class="juri__description-wrapper">
+                  <h3 class="juri__item-title">Алексей Лавров</h3>
+                  <div class="juri__description">
+                    <span class="juri__trainer-type">CrossFit</span>
+                    <ul class="juri__trainer-list">
+                      <li class="juri__trainer-item">Certified Level 3 Trainer</li>
+                      <li class="juri__trainer-item">Победитель чемпионата России по CrossFit</li>
+                      <li class="juri__trainer-item">Опыт — 6 лет</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
 
-          <button class="juri__button juri__button--prev arrow-swiper-button"></button>
           <button class="juri__button juri__button--next arrow-swiper-button"></button>
         </div>
       </div>
@@ -345,15 +431,111 @@
       </div>
     </section>
 
-    <section class="offers" data-test="offers"></section>
+    <section class="offers section" data-test="offers">
+      <div class="offers__container container">
+        <h2 class="offers__title section-title">Акции</h2>
 
-    <section class="faq" data-test="faq"></section>
+        <div class="offers__wrapper">
+          <div class="offers__card-wrapper">
+            <div class="offers__card">
+              <div>
+                <span>Год</span>
+                <span>4999</span>
+              </div>
+              <p>
+                Безлимитный абонемент в&nbsp;тренажёрный зал
+              </p>
+              <a class="offers__link" href="#">Подробнее</a>
+            </div>
+            <div class="offers__img-wrapper">
+              <picture>
+                <source media="(min-width: 1366px)" width="660" height="500" type="image/webp"
+                  srcset="img/offers/offers-img-desktop@1x.webp 1x, img/offers/offers-img-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" width="400" height="462" type="image/webp"
+                  srcset="img/offers/offers-img-tablet@1x.webp 1x, img/offers/offers-img-tablet@2x.webp 2x">
+                <source type="image/webp" width="320" height="360"
+                  srcset="img/offers/offers-img-mobile@1x.webp 1x, img/offers/offers-img-mobile@2x.webp 2x">
+                <source media="(min-width: 1366px)" width="660" height="500" type="image/png"
+                  srcset="img/offers/offers-img-desktop@1x.png 1x, img/offers/offers-img-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" width="400" height="462" type="image/png"
+                  srcset="img/offers/offers-img-tablet@1x.png 1x, img/offers/offers-img-tablet@2x.png 2x">
+                <img class="offers__img" src="img/offers/offers-img-mobile@1x.png"
+                  srcset="img/offers/offers-img-mobile@2x.png 2x" width="320" height="360" alt="">
+              </picture>
+            </div>
+          </div>
+
+          <ul class="offers__list">
+            <li class="offers__item">
+              <div>
+                <h3>Месяц бесплатно</h3>
+                <p>
+                  Приведи друга, получи абонемент в&nbsp;подарок
+                </p>
+              </div>
+              <a class="offers__item-link" href="#">Подробнее</a>
+            </li>
+            <li class="offers__item">
+              <div>
+                <h3>Скидка 20%</h3>
+                <p>
+                  Корпоративный фитнес с командой
+                </p>
+              </div>
+              <a class="offers__item-link" href="#">Подробнее</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section" data-test="faq">
+      <div class="faq__container container">
+        <h2 class="faq__title section-title">Вопросы и ответы</h2>
+
+        <div class="faq__content">
+          <ul class="faq__theme-list">
+            <li class="faq__theme-tiem">
+              <button class="faq__theme-button">Центр</button>
+            </li>
+            <li class="faq__theme-tiem">
+              <button class="faq__theme-button">Абонемент</button>
+            </li>
+            <li class="faq__theme-tiem">
+              <button class="faq__theme-button">Услуги</button>
+            </li>
+            <li class="faq__theme-tiem">
+              <button class="faq__theme-button">Правила</button>
+            </li>
+          </ul>
+
+          <ul class="faq__accordion">
+            <li class="faq__accordion-item">
+              <div>
+                <h3>Как стать членом фитнес&#8209;центра?</h3>
+                <button class="faq__accordion-button faq__accordion-button--active"></button>
+              </div>
+              <div>
+                <p>
+                  При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор.
+                  <br>
+                  При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн<br> и&nbsp;договор придёт вам на
+                  почту.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
     <section class="reviews section" data-test="reviews">
       <div class="reviews__container container">
         <h2 class="reviews-title section-title">Отзывы</h2>
 
         <div class="reviews__box">
+          <button class="reviews__button reviews__button--prev arrow-swiper-button"></button>
+
           <div class="reviews__slider-wrapper swiper">
             <ul class="reviews__list swiper-wrapper">
               <li class="reviews__item swiper-slide">
@@ -424,7 +606,6 @@
             </ul>
           </div>
 
-          <button class="reviews__button reviews__button--prev arrow-swiper-button"></button>
           <button class="reviews__button reviews__button--next arrow-swiper-button"></button>
         </div>
 

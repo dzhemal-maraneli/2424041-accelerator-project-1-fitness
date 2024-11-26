@@ -1,0 +1,255 @@
+.offers {
+  text-align: center;
+}
+
+.offers__container {
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 103px;
+  }
+}
+
+.offers__title {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
+}
+
+.offers__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  @media (min-width: $tablet-width) {
+    gap: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 40px;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.offers__card-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.offers__card {
+  padding: 30px;
+  background-color: $accent-bg;
+  color: $white-color;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 25px;
+    gap: 40px;
+    align-items: flex-start;
+    text-align: left;
+    width: 278px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px 45px;
+    width: 280px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+
+    @media (min-width: $tablet-width) {
+      gap: 20px;
+      align-items: flex-start;
+    }
+  }
+
+  div span:first-child {
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 700;
+
+    @media (min-width: $tablet-width) {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+
+  div span:nth-child(2) {
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 700;
+
+    @media (min-width: $tablet-width) {
+      font-size: 70px;
+      line-height: 70px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}
+
+.offers__link {
+  @include link-reset;
+
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  padding-bottom: 5px;
+  border-bottom: 1px solid $white-color;
+
+  @media (min-width: $tablet-width) {
+    margin-top: auto;
+  }
+}
+
+.offers__img-wrapper {
+  width: 320px;
+  height: 360px;
+  background-color: $second-bg;
+  flex-shrink: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 400px;
+    height: 462px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 280px;
+    height: 460px;
+  }
+}
+
+.offers__list {
+  @include list-reset;
+
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.offers__item {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: $white-color;
+  border: 7px solid transparent;
+  border-image: $outline-gradient 1;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 324px;
+    gap: 30px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    gap: 40px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (min-width: $tablet-width) {
+      gap: 10px;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 700;
+    color: $second-bg;
+
+    @media (min-width: $tablet-width) {
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    color: $second-bg;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+.offers__item-link {
+  @include link-reset;
+
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  color: $second-bg;
+  text-transform: uppercase;
+
+  padding-bottom: 5px;
+  border-bottom: 1px solid $divider-color;
+}

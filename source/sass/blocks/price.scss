@@ -242,6 +242,27 @@
   font-weight: 700;
   color: $accent-text-color;
 
+  &::before {
+    content: attr(data-price);
+    position: absolute;
+    left: 50%;
+    top: -56px;
+    z-index: -1;
+
+    font-size: 80px;
+    line-height: 120px;
+    font-weight: 700;
+    color: $price-shadow;
+
+    transform: translateX(-50%);
+
+    @media (min-width: $tablet-width) {
+      top: -72px;
+      font-size: 100px;
+      line-height: 150px;
+    }
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -266,25 +287,6 @@
       height: 45px;
       right: -8px;
     }
-  }
-}
-
-.price__tariffs-price-bg {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  z-index: -1;
-
-  font-size: 80px;
-  line-height: 120px;
-  font-weight: 700;
-  color: $price-shadow;
-
-  transform: translateX(-50%);
-
-  @media (min-width: $tablet-width) {
-    font-size: 100px;
-    line-height: 150px;
   }
 }
 

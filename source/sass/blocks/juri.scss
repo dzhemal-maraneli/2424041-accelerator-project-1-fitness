@@ -41,12 +41,29 @@
   @include list-reset;
 }
 
-.juri__list .juri__item {
+.juri__item {
   position: relative;
   width: 260px;
   height: 300px;
 
-  &:hover {
+  @media (min-width: $desktop-width) {
+    &:hover {
+      .juri__description-wrapper {
+        background-color: $juri-item-bg;
+      }
+
+      .juri__item-title {
+        bottom: calc(100% - 45px);
+      }
+
+      .juri__description {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &:focus {
     .juri__description-wrapper {
       background-color: $juri-item-bg;
     }
@@ -124,8 +141,6 @@
 }
 
 .juri__button {
-  display: none;
-
   @media (min-width: $tablet-width) {
     position: absolute;
     z-index: 1;

@@ -23,21 +23,21 @@ timeButtons.forEach((button) => {
       tariffsCards.forEach((item) => {
         const tariff = item.getAttribute('data-name');
         const price = item.querySelector('.price__tariffs-price');
-        const priceBg = item.querySelector('.price__tariffs-price-bg');
 
         switch (tariff) {
           case 'personal-trainer':
-            price.textContent = (personalTrainerPrice * time);
+            price.setAttribute('data-price', (personalTrainerPrice * time));
+            price.textContent = price.getAttribute('data-price');
             break;
           case 'daytime':
-            price.textContent = (daytimePrice * time);
+            price.setAttribute('data-price', (daytimePrice * time));
+            price.textContent = price.getAttribute('data-price');
             break;
           case 'all-day':
-            price.textContent = (allDayPrice * time);
+            price.setAttribute('data-price', (allDayPrice * time));
+            price.textContent = price.getAttribute('data-price');
             break;
         }
-
-        priceBg.textContent = price.textContent;
       });
     }
   });

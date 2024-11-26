@@ -1,0 +1,212 @@
+.faq {
+  background-color: $primary-bg;
+  text-align: center;
+  padding: 70px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 0;
+    text-align: left;
+  }
+}
+
+.faq__title {
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
+  }
+}
+
+.faq__content {
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  @media (min-width: $tablet-width) {
+    gap: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
+.faq__theme-list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.faq__theme-button {
+  @include button-reset;
+
+  padding: 14px 22px;
+  border: 1px solid $tab-border-color;
+  font-size: 16px;
+  line-height: 16px;
+  width: 140px;
+
+  @media (min-width: $tablet-width) {
+    padding: 17px 28px;
+    width: 162px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    width: 260px;
+  }
+}
+
+.faq__accordion {
+  @include list-reset;
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.faq__accordion-item {
+  padding: 20px 0;
+  border-top: 1px solid $divider-color;
+  border-bottom: 1px solid $divider-color;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 23px 0;
+    gap: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 23px 0;
+    gap: 23px;
+  }
+
+  div:has(h3) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22px;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+
+    @media (min-width: $tablet-width) {
+      font-size: 22px;
+      line-height: 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  p {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    will-change: max-height;
+    transition: max-height 0.3s ease-out opacity 0.3s;
+
+    margin: 0;
+    width: 238px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+
+    @media (min-width: $tablet-width) {
+      width: 560px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 660px;
+    }
+  }
+
+  br {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.faq__accordion-item + .faq__accordion-item {
+  border-bottom: none;
+}
+
+.faq__accordion-item--active {
+  p {
+    opacity: 1;
+  }
+}
+
+.faq__accordion-button {
+  @include button-reset;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $white-color;
+  border: 1px solid $second-bg;
+  flex-shrink: 0;
+  transition: background-color 0.3s;
+
+  &::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-color: $second-bg;
+    mask-image: url("/__spritemap#sprite-plus-icon-view");
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.faq__accordion-button--active {
+  background-color: $second-bg;
+
+  &::before {
+    background-color: $white-color;
+    mask-image: url("/__spritemap#sprite-minus-icon-view");
+    transform: rotate(360deg);
+  }
+}

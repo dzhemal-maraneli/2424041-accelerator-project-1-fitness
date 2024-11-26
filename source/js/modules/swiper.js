@@ -18,9 +18,11 @@ const juriSwiper = new Swiper('.juri__slider-wrapper', {
   direction: 'horizontal',
   slidesPerView: 1,
   spaceBetween: 40,
-  // navigation: {
-  //   nextEl: '.reviews__button--next',
-  //   prevEl: '.reviews__button--prev',
+  loop: true,
+  navigation: {
+    nextEl: '.juri__button--next',
+    prevEl: '.juri__button--prev',
+  },
   breakpoints: {
     768: {
       slidesPerView: 2,
@@ -30,3 +32,6 @@ const juriSwiper = new Swiper('.juri__slider-wrapper', {
     }
   },
 });
+
+reviewsSwiper.slideReset();
+juriSwiper.slideReset();
