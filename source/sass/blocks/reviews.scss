@@ -26,6 +26,7 @@
 
 .reviews__slider-wrapper {
   width: 240px;
+  box-shadow: 0 0 40px 0 $reviws-shadow;
 
   @media (min-width: $tablet-width) {
     width: 500px;
@@ -41,6 +42,7 @@
 }
 
 .reviews__list .reviews__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,7 +65,7 @@
     gap: 30px;
   }
 
-  div:has(picture) {
+  div:has(img) {
     width: 68px;
     height: 68px;
     border-radius: 50%;

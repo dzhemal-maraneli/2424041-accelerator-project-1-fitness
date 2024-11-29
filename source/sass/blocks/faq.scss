@@ -2,6 +2,7 @@
   background-color: $primary-bg;
   text-align: center;
   padding: 70px 0;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     padding: 60px 0;
@@ -57,11 +58,63 @@
 .faq__theme-button {
   @include button-reset;
 
+  position: relative;
   padding: 14px 22px;
   border: 1px solid $tab-border-color;
   font-size: 16px;
   line-height: 16px;
   width: 140px;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    opacity: 0;
+    background: $gradient-button-bg;
+    transition: opacity 0.3s;
+    z-index: -1;
+  }
+
+  &:hover {
+    border-color: $main-text-color;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $main-text-color;
+  }
+
+  &:active {
+    outline: none;
+    border-color: transparent;
+    color: $white-color;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &:disabled {
+    &:hover {
+      border-color: $main-text-color;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $main-text-color;
+    }
+
+    &:active {
+      outline: none;
+      border-color: transparent;
+      color: $white-color;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
 
   @media (min-width: $tablet-width) {
     padding: 17px 28px;
@@ -76,20 +129,33 @@
   }
 }
 
+.faq__theme-button--active {
+
+}
+
+.faq__accordion-wrapper {
+  overflow: hidden;
+  will-change: height;
+  transition: height 0.3s;
+}
+
 .faq__accordion {
   @include list-reset;
 
   visibility: hidden;
   position: absolute;
   z-index: -9;
-  transition: opacity 0.3s;
+
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 1s;
 
   display: flex;
   flex-direction: column;
   gap: 0;
 
   @media (min-width: $desktop-width) {
-    width: 100%;
+    width: 860px;
   }
 }
 
@@ -237,7 +303,7 @@
     height: 22px;
     background-color: $second-bg;
     mask-image: url("/__spritemap#sprite-plus-icon-view");
-    mask-size: cover;
+    mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
     transition: background-color 0.3s, transform 0.3s;

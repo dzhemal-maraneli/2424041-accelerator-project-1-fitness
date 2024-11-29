@@ -1,26 +1,17 @@
+const accordionWrapper = document.querySelector('.faq__accordion-wrapper');
+const accordionLists = document.querySelectorAll('.faq__accordion');
 const accordionButtons = document.querySelectorAll('.faq__accordion-button');
-const questionsLists = document.querySelectorAll('.faq__accordion');
 
-function accordionHandler() {
-  questionsLists.forEach((list) => {
-    const firstItem = list.querySelector('.faq__accordion-item');
-    const firstItemButton = firstItem.querySelector('.faq__accordion-button');
-
-    firstItem.classList.add('faq__accordion-item--active');
-    firstItemButton.classList.add('faq__accordion-button--active');
-  });
+function accordionItemHandler() {
+  firstItemOpener();
 
   accordionButtons.forEach((button) => {
-    const item = button.closest('.faq__accordion-item');
-
-    setHeight(item);
-
     button.addEventListener('click', (evt) => {
       const currentItem = evt.target.closest('.faq__accordion-item');
+      accordionWrapper.style.height = null;
 
       button.classList.toggle('faq__accordion-button--active');
       currentItem.classList.toggle('faq__accordion-item--active');
-
       setHeight(currentItem);
     });
   });
@@ -36,4 +27,16 @@ function setHeight(item) {
   }
 }
 
-accordionHandler();
+function firstItemOpener() {
+  accordionLists.forEach((list) => {
+    const firstItem = list.querySelector('.faq__accordion-item');
+    const firstItemButton = firstItem.querySelector('.faq__accordion-button');
+
+    firstItem.classList.add('faq__accordion-item--active');
+    firstItemButton.classList.add('faq__accordion-button--active');
+    setHeight(firstItem);
+  });
+}
+
+accordionItemHandler();
+

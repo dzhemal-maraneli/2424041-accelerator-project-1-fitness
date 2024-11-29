@@ -1,10 +1,39 @@
 .phone {
   @include link-reset;
 
+  position: relative;
   font-weight: 700;
   font-size: 22px;
   line-height: 22px;
   color: $white-color;
+  transition: color 0.3s;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    transition: background-color 0.3s;
+  }
+
+  &:hover {
+    color: $number-hover-color;
+  }
+
+  &:focus {
+    color: $second-bg;
+    outline: none;
+  }
+
+  &:active {
+    &::before {
+      background-color: $main-text-color;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
@@ -13,5 +42,25 @@
 
   @media (min-width: $desktop-width) {
     font-size: 26px;
+  }
+}
+
+.phone--disabled {
+  color: $primary-bg;
+  cursor: auto;
+  opacity: 0.5;
+
+  &:hover {
+    color: $primary-bg;
+  }
+
+  &:focus {
+    color: $primary-bg;
+  }
+
+  &:active {
+    &::before {
+      background-color: transparent;
+    }
   }
 }

@@ -128,16 +128,6 @@
 }
 
 .offers__link {
-  @include link-reset;
-
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-
-  padding-bottom: 5px;
-  border-bottom: 1px solid $white-color;
-
   @media (min-width: $tablet-width) {
     margin-top: auto;
   }
@@ -239,17 +229,4 @@
       line-height: 24px;
     }
   }
-}
-
-.offers__item-link {
-  @include link-reset;
-
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 700;
-  color: $second-bg;
-  text-transform: uppercase;
-
-  padding-bottom: 5px;
-  border-bottom: 1px solid $divider-color;
 }

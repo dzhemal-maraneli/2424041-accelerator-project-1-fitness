@@ -12,7 +12,7 @@
   text-align: center;
   color: $white-color;
   background-color: transparent;
-  transition: color 0.3s, outline 0.3s, background-color 0.3s;
+  transition: color 0.3s, outline-color 0.3s, background-color 0.3s;
 
   &:hover {
     color: $accent-text-color;
@@ -20,25 +20,28 @@
   }
 
   &:focus {
-    outline: 2px solid $main-text-color;
+    outline-color: $main-text-color;
     color: $accent-text-color;
     background-color: $white-color;
   }
 
   &:active {
     color: $main-text-color;
-    outline: 2px solid $white-color;
+    outline-color: $white-color;
   }
 
   &--disabled {
     opacity: 0.5;
-  }
 
-  &--disabled:hover {
-    opacity: 0.5;
-    color: $white-color;
-    outline: 2px solid $white-color;
-    background-color: transparent;
+    &:hover,
+    &:focus,
+    &:active {
+      cursor: auto;
+      opacity: 0.5;
+      color: $white-color;
+      outline-color: $white-color;
+      background-color: transparent;
+    }
   }
 }
 
@@ -52,7 +55,7 @@
   z-index: 1;
 
   &:hover {
-    outline: 2px solid transparent;
+    outline-color: transparent;
     color: $white-color;
 
     &::before {
@@ -61,7 +64,7 @@
   }
 
   &:focus {
-    outline: 2px solid $main-text-color;
+    outline-color: $main-text-color;
     color: $white-color;
 
     &::before {
@@ -71,7 +74,7 @@
 
   &:active {
     color: $white-color-op07;
-    outline: 2px solid transparent;
+    outline-color: transparent;
 
     &::before {
       opacity: 1;
@@ -91,11 +94,12 @@
 
 .button--disabled .button--has-background {
   opacity: 0.3;
+  cursor: auto;
 
   &:hover {
     opacity: 0.3;
     color: $main-text-color;
-    outline: 2px solid $main-text-color;
+    outline-color: $main-text-color;
 
     &::before {
       opacity: 0;

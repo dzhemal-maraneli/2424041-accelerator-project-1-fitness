@@ -1,0 +1,163 @@
+.link {
+  @include link-reset;
+
+  position: relative;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  color: $white-color;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+  outline: none;
+
+  transition: opacity 0.3s;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    left: 50%;
+    bottom: 0;
+    background-color: $white-color;
+    transition: background-color 0.3s;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    inset: -10px -10px -4px;
+    outline: 1px solid transparent;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    &::before {
+      background-color: transparent;
+    }
+
+    &::after {
+      outline-color: $white-color;
+    }
+  }
+
+  &:active {
+    opacity: 1;
+
+    &::before {
+      background-color: $white-color;
+    }
+
+    &::after {
+      outline-color: transparent;
+    }
+  }
+}
+
+.link--light-bg {
+  color: $second-bg;
+
+  &::before {
+    background-color: $second-bg;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    &::before {
+      background-color: transparent;
+    }
+
+    &::after {
+      outline-color: $second-bg;
+    }
+  }
+
+  &:active {
+    opacity: 1;
+
+    &::before {
+      background-color: $second-bg;
+    }
+
+    &::after {
+      outline-color: transparent;
+    }
+  }
+}
+
+.link--disabled {
+  color: $white-color;
+  opacity: 0.5;
+  cursor: auto;
+
+  &::before {
+    background-color: $white-color;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    &::before {
+      background-color: $white-color;
+    }
+
+    &::after {
+      outline-color: transparent;
+    }
+  }
+
+  &:active {
+    opacity: 0.5;
+
+    &::before {
+      background-color: $white-color;
+    }
+
+    &::after {
+      outline-color: transparent;
+    }
+  }
+}
+
+.link--light-bg.link--disabled {
+  color: $second-bg;
+
+  &::before {
+    background-color: $second-bg;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    &::before {
+      background-color: $second-bg;
+    }
+
+    &::after {
+      outline-color: transparent;
+    }
+  }
+
+  &:active {
+    opacity: 0.5;
+
+    &::before {
+      background-color: $second-bg;
+    }
+
+    &::after {
+      outline-color: transparent;
+    }
+  }
+}

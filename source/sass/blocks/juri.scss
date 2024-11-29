@@ -46,20 +46,18 @@
   width: 260px;
   height: 300px;
 
-  @media (min-width: $desktop-width) {
-    &:hover {
-      .juri__description-wrapper {
-        background-color: $juri-item-bg;
-      }
+  &:hover {
+    .juri__description-wrapper {
+      background-color: $juri-item-bg;
+    }
 
-      .juri__item-title {
-        bottom: calc(100% - 45px);
-      }
+    .juri__item-title {
+      bottom: calc(100% - 45px);
+    }
 
-      .juri__description {
-        visibility: visible;
-        opacity: 1;
-      }
+    .juri__description {
+      visibility: visible;
+      opacity: 1;
     }
   }
 
@@ -154,7 +152,7 @@
   }
 
   &--prev {
-    left: -14px;
+    left: -12px;
 
     @media (min-width: $desktop-width) {
       left: -70px;
@@ -163,7 +161,7 @@
 
   &--next {
     transform: translateY(-50%) rotate(0deg);
-    right: -14px;
+    right: -12px;
 
     @media (min-width: $desktop-width) {
       right: -70px;

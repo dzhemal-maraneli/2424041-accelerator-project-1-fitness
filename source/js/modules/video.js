@@ -1,7 +1,7 @@
 const videoWrapper = document.querySelector('.about__video');
 const playButton = videoWrapper.querySelector('.about__video-play-button');
 const videoLink = videoWrapper.querySelector('.about__video-link');
-const videoSrc = 'https://www.youtube.com/embed/9TZXsZItgdw?si=EIWmPhl5YhnnsCG8';
+const videoSrc = 'https://www.youtube.com/embed/9TZXsZItgdw?si=EIWmPhl5YhnnsCG8&autoplay=1';
 
 function videoHandler() {
   videoLink.remove();
@@ -20,7 +20,7 @@ function createIframe() {
 
   iframe.setAttribute('src', videoSrc);
   iframe.setAttribute('frameborder', '0');
-  iframe.setAttribute('allow', 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+  iframe.setAttribute('allow', 'autoplay', 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
   iframe.setAttribute('allowfullscreen', 'true');
 
   return iframe;

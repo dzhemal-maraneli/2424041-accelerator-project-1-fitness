@@ -51,14 +51,17 @@
   height: 25px;
   background-color: $white-color;
   border-radius: 50%;
+  transition: background-color 0.3s;
 
   &::before {
     content: "";
-    mask-size: cover;
-    mask-repeat: no-repeat;
-    background-color: $footer-bg;
     width: 14px;
     height: 14px;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $footer-bg;
+    transition: background-color 0.3s;
   }
 
   &--vk::before {
@@ -71,5 +74,51 @@
 
   &--reddit::before {
     mask-image: url("/__spritemap#sprite-reddit-icon-view");
+  }
+
+  &:hover {
+    background-color: $divider-color;
+
+    &::before {
+      background-color: $white-color;
+    }
+  }
+
+  &:focus {
+    background-color: $accent-text-color;
+    outline: none;
+
+    &::before {
+      background-color: $white-color;
+    }
+  }
+
+  &:active {
+    background-color: $main-text-color;
+  }
+}
+
+.footer__social-link--disabled {
+  background-color: $white-color;
+  opacity: 0.3;
+
+  &:hover {
+    background-color: $white-color;
+
+    &::before {
+      background-color: $footer-bg;
+    }
+  }
+
+  &:focus {
+    background-color: $white-color;
+
+    &::before {
+      background-color: $footer-bg;
+    }
+  }
+
+  &:active {
+    background-color: $white-color;
   }
 }
