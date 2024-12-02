@@ -1,18 +1,18 @@
 const accordionWrapper = document.querySelector('.faq__accordion-wrapper');
 const accordionLists = document.querySelectorAll('.faq__accordion');
-const accordionButtons = document.querySelectorAll('.faq__accordion-button');
+const accordionItems = document.querySelectorAll('.faq__accordion-item');
 
 function accordionItemHandler() {
   firstItemOpener();
 
-  accordionButtons.forEach((button) => {
-    button.addEventListener('click', (evt) => {
-      const currentItem = evt.target.closest('.faq__accordion-item');
+  accordionItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      const currentButton = item.querySelector('.faq__accordion-button');
       accordionWrapper.style.height = null;
 
-      button.classList.toggle('faq__accordion-button--active');
-      currentItem.classList.toggle('faq__accordion-item--active');
-      setHeight(currentItem);
+      currentButton.classList.toggle('faq__accordion-button--active');
+      item.classList.toggle('faq__accordion-item--active');
+      setHeight(item);
     });
   });
 }

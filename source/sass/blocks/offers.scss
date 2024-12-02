@@ -39,7 +39,6 @@
   @media (min-width: $desktop-width) {
     gap: 40px;
     flex-direction: row;
-    align-items: flex-end;
   }
 }
 
@@ -166,6 +165,7 @@
   @media (min-width: $desktop-width) {
     flex-direction: column;
     width: 100%;
+    align-self: flex-end;
   }
 }
 

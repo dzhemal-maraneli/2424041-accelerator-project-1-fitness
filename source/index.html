@@ -4,7 +4,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SUPERGYM</title>
+  <meta name="description"
+    content="Сайт тренажерного зала SUPERGYM. Самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья.">
+  <title>Тренажерный зал SUPERGYM | Главная</title>
+  <link rel="preload" href="./fonts/roboto-condensed/RobotoCondensed-Regular.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="preload" href="./fonts/roboto-condensed/RobotoCondensed-Bold.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="preload" href="./fonts/roboto-condensed/RobotoCondensed-Light.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="preload" href="./fonts/alumni-sans/AlumniSans-SemiBold.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="preload" href="./fonts/alumni-sans/AlumniSans-ExtraBold.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="SUPERGYM">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="sass/style.scss">
 </head>
 
@@ -26,7 +44,7 @@
           <li class="hero__features-item">Групповые&nbsp;занятия</li>
           <li class="hero__features-item">Кардио-зона</li>
         </ul>
-        <sapn class="hero__city">Омск</sapn>
+        <span class="hero__city">Омск</span>
         <h2 class="hero__title">Фитнес Центр</h2>
         <a class="hero__offer-link button" href="#">Купить абонемент</a>
       </div>
@@ -46,7 +64,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="page-body__main">
     <section class="about section" data-test="about">
       <div class="container about__container">
         <div class="about__text-content">
@@ -69,21 +87,23 @@
               srcset="img/about/about-img-desktop@1x.webp 1x, img/about/about-img-desktop@2x.webp 2x">
             <source media="(min-width: 768px)" width="678" height="345" type="image/webp"
               srcset="img/about/about-img-tablet@1x.webp 1x, img/about/about-img-tablet@2x.webp 2x">
-            <source type="image/webp" width="280" height="280"
+            <source type="image/webp" width="320" height="280"
               srcset="img/about/about-img-mobile@1x.webp 1x, img/about/about-img-mobile@2x.webp 2x">
             <source media="(min-width: 1366px)" width="660" height="400" type="image/png"
               srcset="img/about/about-img-desktop@1x.jpg 1x, img/about/about-img-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" width="678" height="345" type="image/png"
               srcset="img/about/about-img-tablet@1x.jpg 1x, img/about/about-img-tablet@2x.jpg 2x">
             <img class="about__img" src="img/about/about-img-mobile@1x.jpg"
-              srcset="img/about/about-img-mobile@2x.jpg 2x" width="320" height="280" loading="lazy"
+              srcset="img/about/about-img-mobile@2x.jpg 2x" width="320" height="280"
               alt="Фотография нашего тренажерного зала">
           </picture>
         </div>
 
         <div class="about__video">
           <a class="about__video-link" href="https://www.youtube.com/watch?v=9TZXsZItgdw&ab_channel=HTMLAcademy"
-            target="_blank"></a>
+            target="_blank" rel="noreferrer noopener">
+            <span class="visually-hidden">Открыть видео в новой вкладке</span>
+          </a>
           <button class="about__video-play-button" type="button">
             <span class="visually-hidden">Запустить видео</span></button>
         </div>
@@ -183,7 +203,8 @@
         <h2 class="juri__title section-title">Жюри</h2>
 
         <div class="juri__box">
-          <button class="juri__button juri__button--prev arrow-swiper-button" type="button" aria-label="Перелистнуть влево"></button>
+          <button class="juri__button juri__button--prev arrow-swiper-button" type="button"
+            aria-label="Перелистнуть влево"></button>
 
           <div class="juri__slider-wrapper swiper">
             <ul class="juri__list swiper-wrapper">
@@ -365,7 +386,8 @@
             </ul>
           </div>
 
-          <button class="juri__button juri__button--next arrow-swiper-button" type="button" aria-label="Перелистнуть вправо"></button>
+          <button class="juri__button juri__button--next arrow-swiper-button" type="button"
+            aria-label="Перелистнуть вправо"></button>
         </div>
       </div>
     </section>
@@ -495,11 +517,11 @@
     <section class="faq section" data-test="faq">
       <div class="faq__container container">
         <h2 class="faq__title section-title">Вопросы и ответы</h2>
-
         <div class="faq__content">
           <ul class="faq__theme-list">
             <li class="faq__theme-tiem">
-              <button class="faq__theme-button" type="button" disabled data-theme="center">Центр</button>
+              <button class="faq__theme-button faq__theme-button--active" type="button"
+                data-theme="center">Центр</button>
             </li>
             <li class="faq__theme-tiem">
               <button class="faq__theme-button" type="button" data-theme="subscription">Абонемент</button>
@@ -517,14 +539,18 @@
               <li class="faq__accordion-item faq__accordion-item--active">
                 <div>
                   <h3>Как стать членом фитнес&#8209;центра?</h3>
-                  <button class="faq__accordion-button faq__accordion-button--active" type="button" aria-label="Закрыть вкладку"></button>
+                  <button class="faq__accordion-button faq__accordion-button--active" type="button"
+                    aria-label="Закрыть вкладку"></button>
                 </div>
                 <div>
                   <p>
-                    При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор.
+                    При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать
+                    договор.
                     <br>
-                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн<br> и&nbsp;договор придёт вам на
-                    почту.
+                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн
+                    <br>
+                    и&nbsp;договор
+                    придёт вам на почту.
                   </p>
                 </div>
               </li>
@@ -535,9 +561,13 @@
                 </div>
                 <div>
                   <p>
-                    При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор.
+                    При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать
+                    договор.
                     <br>
-                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн<br> и&nbsp;договор придёт вам на
+                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн
+                    <br>
+                    и&nbsp;договор
+                    придёт вам на
                     почту.
                   </p>
                 </div>
@@ -549,9 +579,13 @@
                 </div>
                 <div>
                   <p>
-                    При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор.
+                    При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать
+                    договор.
                     <br>
-                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн<br> и&nbsp;договор придёт вам на
+                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн
+                    <br>
+                    и&nbsp;договор
+                    придёт вам на
                     почту.
                   </p>
                 </div>
@@ -565,7 +599,10 @@
                   <p>
                     При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор.
                     <br>
-                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн<br> и&nbsp;договор придёт вам на
+                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн
+                    <br>
+                    и&nbsp;договор придёт
+                    вам на
                     почту.
                   </p>
                 </div>
@@ -575,13 +612,18 @@
               <li class="faq__accordion-item faq__accordion-item--active">
                 <div>
                   <h3>Как стать членом фитнес&#8209;центра?</h3>
-                  <button class="faq__accordion-button faq__accordion-button--active" type="button" aria-label="Закрыть вкладку"></button>
+                  <button class="faq__accordion-button faq__accordion-button--active" type="button"
+                    aria-label="Закрыть вкладку"></button>
                 </div>
                 <div>
                   <p>
-                    При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор.
+                    При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать
+                    договор.
                     <br>
-                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн<br> и&nbsp;договор придёт вам на
+                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн
+                    <br>
+                    и&nbsp;договор
+                    придёт вам на
                     почту.
                   </p>
                 </div>
@@ -593,9 +635,13 @@
                 </div>
                 <div>
                   <p>
-                    При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор.
+                    При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать
+                    договор.
                     <br>
-                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн<br> и&nbsp;договор придёт вам на
+                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн
+                    <br>
+                    и&nbsp;договор
+                    придёт вам на
                     почту.
                   </p>
                 </div>
@@ -607,9 +653,13 @@
                 </div>
                 <div>
                   <p>
-                    При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор.
+                    При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать
+                    договор.
                     <br>
-                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн<br> и&nbsp;договор придёт вам на
+                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн
+                    <br>
+                    и&nbsp;договор
+                    придёт вам на
                     почту.
                   </p>
                 </div>
@@ -623,9 +673,31 @@
                 </div>
                 <div>
                   <p>
-                    При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор.
+                    При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать
+                    договор.
                     <br>
-                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн<br> и&nbsp;договор придёт вам на
+                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн
+                    <br>
+                    и&nbsp;договор
+                    придёт вам на
+                    почту.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__accordion-item">
+                <div>
+                  <h3>Сколько тренеров работает в клубе и какова их квалификация?</h3>
+                  <button class="faq__accordion-button" type="button" aria-label="Открыть вкладку"></button>
+                </div>
+                <div>
+                  <p>
+                    При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать
+                    договор.
+                    <br>
+                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн
+                    <br>
+                    и&nbsp;договор
+                    придёт вам на
                     почту.
                   </p>
                 </div>
@@ -639,21 +711,10 @@
                   <p>
                     При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор.
                     <br>
-                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн<br> и&nbsp;договор придёт вам на
-                    почту.
-                  </p>
-                </div>
-              </li>
-              <li class="faq__accordion-item">
-                <div>
-                  <h3>Сколько тренеров работает в клубе и какова их квалификация?</h3>
-                  <button class="faq__accordion-button" type="button" aria-label="Открыть вкладку"></button>
-                </div>
-                <div>
-                  <p>
-                    При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор.
+                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн
                     <br>
-                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн<br> и&nbsp;договор придёт вам на
+                    и&nbsp;договор придёт
+                    вам на
                     почту.
                   </p>
                 </div>
@@ -663,13 +724,17 @@
               <li class="faq__accordion-item faq__accordion-item--active">
                 <div>
                   <h3>Как стать членом фитнес&#8209;центра?</h3>
-                  <button class="faq__accordion-button faq__accordion-button--active" type="button" aria-label="Закрыть вкладку"></button>
+                  <button class="faq__accordion-button faq__accordion-button--active" type="button"
+                    aria-label="Закрыть вкладку"></button>
                 </div>
                 <div>
                   <p>
                     При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор.
                     <br>
-                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн<br> и&nbsp;договор придёт вам на
+                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн
+                    <br>
+                    и&nbsp;договор придёт
+                    вам на
                     почту.
                   </p>
                 </div>
@@ -683,7 +748,10 @@
                   <p>
                     При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор.
                     <br>
-                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн<br> и&nbsp;договор придёт вам на
+                    При покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн
+                    <br>
+                    и&nbsp;договор придёт
+                    вам на
                     почту.
                   </p>
                 </div>
@@ -699,7 +767,8 @@
         <h2 class="reviews-title section-title">Отзывы</h2>
 
         <div class="reviews__box">
-          <button class="reviews__button reviews__button--prev arrow-swiper-button" aria-label="Перелистнуть влево"></button>
+          <button class="reviews__button reviews__button--prev arrow-swiper-button" type="button"
+            aria-label="Перелистнуть влево"></button>
 
           <div class="reviews__slider-wrapper swiper">
             <ul class="reviews__list swiper-wrapper">
@@ -771,7 +840,8 @@
             </ul>
           </div>
 
-          <button class="reviews__button reviews__button--next arrow-swiper-button" aria-label="Перелистнуть вправо"></button>
+          <button class="reviews__button reviews__button--next arrow-swiper-button" type="button"
+            aria-label="Перелистнуть вправо"></button>
         </div>
       </div>
     </section>
@@ -781,9 +851,19 @@
         <div class="form__form-inner">
           <h3 class="form__title section-title section-title--dark-bg">Бесплатное занятие</h3>
           <form class="form__box" method="post" action="https://echo.htmlacademy.ru">
-            <input class="form__input" type="text" id="name" placeholder="Имя">
-            <input class="form__input" type="text" id="number" placeholder="Телефон">
-            <button class="form__button button">Отправить</button>
+            <label class="form__label">
+              <span class="visually-hidden">Введите ваше имя</span>
+              <input class="form__input" type="text" name="user-name" id="name" placeholder="Имя" required>
+              <span class="form__error" id="name-error">Допустимы только буквы.</span>
+            </label>
+
+            <label class="form__label">
+              <span class="visually-hidden">Введите ваш телефон</span>
+              <input class="form__input" type="text" name="user-number" id="number" placeholder="Телефон" required>
+              <span class="form__error" id="number-error">Допустимы только цифры.</span>
+            </label>
+
+            <button class="form__button button" type="submit">Отправить</button>
           </form>
         </div>
       </div>
@@ -794,21 +874,21 @@
           <address class="contacts__lists-wrapper">
             <ul class="contacts__list">
               <li class="contacts__item">
-                <h3 class="contacts__item-title">Адрес:</h3>
+                <span class="contacts__item-title">Адрес:</span>
                 <p class="contacts__item-text">г. Омск, ул. 60 лет Октября, 7</p>
               </li>
               <li class="contacts__item">
-                <h3 class="contacts__item-title">График работы:</h3>
+                <span class="contacts__item-title">График работы:</span>
                 <p class="contacts__item-text">Пн-Вс: с 8:00 до 22:00</p>
               </li>
             </ul>
             <ul class="contacts__list">
               <li class="contacts__item">
-                <h3 class="contacts__item-title">Телефон:</h3>
+                <span class="contacts__item-title">Телефон:</span>
                 <a class="contacts__item-link" href="tel:88005555555">8 800 555-55-55</a>
               </li>
               <li class="contacts__item">
-                <h3 class="contacts__item-title">Email:</h3>
+                <span class="contacts__item-title">Email:</span>
                 <a class="contacts__item-link" href="mailto:oмск@supergym.ru">oмск@supergym.ru</a>
               </li>
             </ul>
@@ -829,19 +909,19 @@
           </li>
 
           <li class="nav__item">
-            <a class="nav__link menu-link" href="">Абонементы</a>
+            <a class="nav__link menu-link" href="#">Абонементы</a>
           </li>
 
           <li class="nav__item">
-            <a class="nav__link menu-link" href="">Акции</a>
+            <a class="nav__link menu-link" href="#">Акции</a>
           </li>
 
           <li class="nav__item">
-            <a class="nav__link menu-link" href="">Тренеры</a>
+            <a class="nav__link menu-link" href="#">Тренеры</a>
           </li>
 
           <li class="nav__item">
-            <a class="nav__link menu-link" href="">Расписание</a>
+            <a class="nav__link menu-link" href="#">Расписание</a>
           </li>
         </ul>
       </nav>

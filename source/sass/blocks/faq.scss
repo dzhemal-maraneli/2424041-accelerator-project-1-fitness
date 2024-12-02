@@ -5,7 +5,7 @@
   overflow: hidden;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 0;
+    padding: 60px 0 61px;
   }
 
   @media (min-width: $desktop-width) {
@@ -31,7 +31,7 @@
 
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 36px;
 
   @media (min-width: $tablet-width) {
     gap: 45px;
@@ -69,7 +69,7 @@
   &::before {
     position: absolute;
     content: "";
-    inset: 0;
+    inset: -1px;
     opacity: 0;
     background: $gradient-button-bg;
     transition: opacity 0.3s;
@@ -123,14 +123,23 @@
     line-height: 18px;
   }
 
-
   @media (min-width: $desktop-width) {
     width: 260px;
   }
 }
 
 .faq__theme-button--active {
+  outline: none;
+  border-color: transparent;
+  color: $white-color;
 
+  &::before {
+    opacity: 1;
+  }
+
+  &:hover {
+    border-color: transparent;
+  }
 }
 
 .faq__accordion-wrapper {
@@ -168,16 +177,13 @@
 
 .faq__accordion-item {
   position: relative;
-  padding: 20px 0;
+  padding: 20px 0 21px;
+  cursor: pointer;
 
   display: flex;
   flex-direction: column;
   gap: 0;
   transition: gap 0.3s;
-
-  @media (min-width: $tablet-width) {
-    padding: 23px 0;
-  }
 
   &::after {
     position: absolute;
@@ -201,6 +207,54 @@
       left: 0;
       right: 0;
     }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 23px 0;
+    }
+  }
+
+  &:hover {
+    .faq__accordion-button {
+      background-color: $second-bg;
+    }
+
+    .faq__accordion-button::before {
+      background-color: $white-color;
+    }
+  }
+
+  &:focus {
+    .faq__accordion-button {
+      outline: none;
+      border: 1px solid $second-bg;
+      background-color: $divider-color;
+    }
+
+    .faq__accordion-button::before {
+      background-color: $white-color;
+    }
+  }
+
+  &:active {
+    .faq__accordion-button {
+      background-color: $main-text-color;
+    }
+
+    .faq__accordion-button::before {
+      background-color: $white-color;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 23px 0 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 23px 0;
   }
 
   div:has(h3) {

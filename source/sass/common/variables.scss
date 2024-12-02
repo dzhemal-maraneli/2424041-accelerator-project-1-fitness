@@ -4,6 +4,7 @@ $second-font: "Alumni Sans", sans-serif;
 
 /* COLORS */
 $white-color: #ffffff;
+$white-color-op03: rgba(255, 255, 255, 0.3);
 $white-color-op07: rgba(255, 255, 255, 0.7);
 $white-color-op08: rgba(255, 255, 255, 0.8);
 $desc-text-color: #2e35ac;
@@ -22,10 +23,11 @@ $number-hover-color: rgba(28, 51, 116, 0.5);
 $tab-line-hover: #787878;
 $footer-bg: #030a1a;
 $active-tab-color: #d10a42;
+$form-error-color: #ff121f;
 $price-border: rgba(120, 120, 120, 0.2);
 $price-shadow: #e8e8e8;
 $play-button-focus: #c8c9cc;
-$gradient-button-bg: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+$gradient-button-bg: linear-gradient(90deg, #ed0233 0%, #003eb7 100%);
 $outline-gradient: linear-gradient(136deg, #d10a42 0%, #00359f 100%);
 $features-gradient: linear-gradient(129deg, #d10a42 0%, #0041ca 100%);
 $features-bivider-color: rgba(209, 10, 66, 0.2);

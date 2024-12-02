@@ -3,15 +3,25 @@ const accordionLists = document.querySelectorAll('.faq__accordion');
 const filterButtons = document.querySelectorAll('.faq__theme-button');
 
 function accordionFilter() {
+
+  accordionLists[0].classList.add('faq__accordion--active');
+  filterButtons[0].classList.add('faq__theme-button--active');
+
   filterButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const filter = button.getAttribute('data-theme');
       const activeList = document.querySelector('.faq__accordion--active');
+      const activeButton = document.querySelector('.faq__theme-button--active');
 
       updateWrapperHeight();
 
       if (activeList && activeList.getAttribute('data-name') === filter) {
         return;
+      }
+
+      if (activeButton) {
+        activeButton.classList.remove('faq__theme-button--active');
+        button.classList.add('faq__theme-button--active');
       }
 
       accordionLists.forEach((list) => {
